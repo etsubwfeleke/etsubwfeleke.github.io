@@ -4,12 +4,27 @@
         <link>https://etsubwfeleke.github.io/posts/</link>
         <description>All Posts | Etusb</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 02 Jun 2025 19:03:21 -0500</lastBuildDate><atom:link href="https://etsubwfeleke.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>My First Post</title>
-    <link>https://etsubwfeleke.github.io/my-first-post/</link>
-    <pubDate>Mon, 02 Jun 2025 19:03:21 -0500</pubDate>
+    <title>Affordable Europe</title>
+    <link>https://etsubwfeleke.github.io/affordable-europe/</link>
+    <pubDate>Sun, 02 Mar 2025 20:46:35 -0500</pubDate>
     <author>Author</author>
-    <guid>https://etsubwfeleke.github.io/my-first-post/</guid>
-    <description><![CDATA[<h2 id="hello">Hello</h2>]]></description>
+    <guid>https://etsubwfeleke.github.io/affordable-europe/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/europe-schools/featured-image.png" referrerpolicy="no-referrer">
+            </div><h2 id="-affordable-european-countries-vs-education-quality-the-best-bang-for-your-buck">📊 Affordable European Countries vs. Education Quality: The Best Bang for Your Buck</h2>
+<h2 id="-introduction">🎓 Introduction</h2>
+<p>Hello <strong>#DataFam</strong>!</p>
+<p>I’m thrilled to share my <strong>first-ever personal data visualization project</strong> created during my data visualization course at the <strong>University of North Texas</strong>! In this project, I analyzed a dataset that explores <strong>education expenses across European countries</strong>, focusing on how affordability correlates with <strong>education quality</strong>.</p>
+<hr>
+<h2 id="-research-questions">🔍 Research Questions</h2>
+<ol>
+<li>Which countries provide the most <strong>budget-friendly</strong> education options, considering tuition <strong>and</strong> living costs?</li>
+<li>What is the <strong>average tuition fee</strong> across these countries?</li>
+<li>How does the <strong>cost</strong> compare to the <strong>quality</strong> of education provided?</li>
+</ol>
+<hr>
+<h2 id="-key-insights">💡 Key Insights</h2>
+<p>✅ <strong>Cost &amp; Living Expenses Matter</strong>: When considering affordable education in Europe, both <strong>tuition fees</strong> and <strong>living costs</strong> must be considered together.</p>]]></description>
 </item>
 </channel>
 </rss>
