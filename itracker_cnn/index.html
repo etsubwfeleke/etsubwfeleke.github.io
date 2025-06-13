@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>PyTorch Eye Blink Tracker Pt.2 - Etsub Feleke</title><meta name="Description" content="This is my KeepIt site"><meta property="og:url" content="https://etsubwfeleke.github.io/itracker_cnn/">
+  <meta property="og:site_name" content="Etsub Feleke">
+  <meta property="og:title" content="PyTorch Eye Blink Tracker Pt.2">
+  <meta property="og:description" content="CNN, Data Handling and MINST dataset In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.
+Convolutional Neural Networks (CNNs) CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-13T16:26:52-05:00">
+    <meta property="article:modified_time" content="2025-06-13T16:26:52-05:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PyTorch Eye Blink Tracker Pt.2">
+  <meta name="twitter:description" content="CNN, Data Handling and MINST dataset In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.
+Convolutional Neural Networks (CNNs) CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.">
+<meta name="application-name" content="Etsub">
+<meta name="apple-mobile-web-app-title" content="Etsub"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#ffffff"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://etsubwfeleke.github.io/itracker_cnn/" /><link rel="prev" href="https://etsubwfeleke.github.io/itracker/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "PyTorch Eye Blink Tracker Pt.2",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/etsubwfeleke.github.io\/itracker_cnn\/"
+        },"genre": "posts","wordcount":  1002 ,
+        "url": "https:\/\/etsubwfeleke.github.io\/itracker_cnn\/","datePublished": "2025-06-13T16:26:52-05:00","dateModified": "2025-06-13T16:26:52-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Etsub Feleke">Etsub Feleke</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/posts/"> Archives </a><a class="menu-item" href="/about/"> About Me </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Etsub Feleke">Etsub Feleke</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/posts/" title="">Archives</a><a class="menu-item" href="/about/" title="">About Me</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">PyTorch Eye Blink Tracker Pt.2</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Author</a>
+</span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-06-13">2025-06-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1002 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/eyeblink_project/minst.png"
+        data-srcset="/images/eyeblink_project/minst.png, /images/eyeblink_project/minst.png 1.5x, /images/eyeblink_project/minst.png 2x"
+        data-sizes="auto"
+        alt="/images/eyeblink_project/minst.png"
+        title="/images/eyeblink_project/minst.png" width="989" height="273" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#cnn-data-handling-and-minst-dataset">CNN, Data Handling and MINST dataset</a>
+      <ul>
+        <li><a href="#convolutional-neural-networks-cnns">Convolutional Neural Networks (CNNs)</a></li>
+        <li><a href="#a-quick-overview-of-cnns-and-data-handling-in-pytorch">A Quick Overview of CNNs and Data Handling in PyTorch</a></li>
+        <li><a href="#cnn-layers-nnconv2d-and-nnmaxpool2d">CNN Layers: <code>nn.Conv2d</code> and <code>nn.MaxPool2d</code></a></li>
+        <li><a href="#custom-dataset-and-dataloader">Custom Dataset and DataLoader</a></li>
+        <li><a href="#mini-project-simple-cnn-on-mnist">Mini Project: Simple CNN on MNIST</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="cnn-data-handling-and-minst-dataset">CNN, Data Handling and MINST dataset</h2>
+<p>In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.</p>
+<h3 id="convolutional-neural-networks-cnns">Convolutional Neural Networks (CNNs)</h3>
+<p>CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.</p>
+<h3 id="a-quick-overview-of-cnns-and-data-handling-in-pytorch">A Quick Overview of CNNs and Data Handling in PyTorch</h3>
+<p>Convolutional Neural Networks (CNNs) are powerful tools for image-related tasks, leveraging convolutional layers to learn spatial hierarchies of features. They reduce computational complexity through parameter sharing and process images hierarchically, making them robust to spatial variations.</p>
+<h4 id="key-components-of-cnns">Key Components of CNNs:</h4>
+<ol>
+<li><strong>Convolutional Layer (<code>nn.Conv2d</code>)</strong>: Detects local features using kernels, strides, and padding. It processes input channels and outputs feature maps.</li>
+<li><strong>Pooling Layer (<code>nn.MaxPool2d</code>)</strong>: Downsamples feature maps, reducing parameters and enhancing translational invariance.</li>
+<li><strong>Fully Connected Layer (<code>nn.Linear</code>)</strong>: Flattens high-level features for final classification or regression tasks.</li>
+</ol>
+<h4 id="what-are-cnns-and-why-use-them">What are CNNs and Why Use Them?</h4>
+<p>Convolutional Neural Networks (CNNs) are a specialized kind of neural network designed for processing data with a grid-like topology — like images. Unlike traditional fully connected layers, CNNs use convolutional layers that scan small regions (kernels) over the input, capturing important features such as edges, textures, and patterns.</p>
+<p>Key benefits of CNNs include:</p>
+<ul>
+<li>
+<p><strong>Parameter sharing:</strong> The same kernel (filter) is applied across the entire image, drastically reducing the number of parameters compared to fully connected layers.</p>
+</li>
+<li>
+<p><strong>Spatial hierarchy:</strong> CNNs can learn hierarchical features from simple edges to complex objects as you go deeper.</p>
+</li>
+<li>
+<p><strong>Robustness:</strong> Pooling layers reduce spatial size, making the model more resilient to small shifts or distortions in the image.</p>
+</li>
+</ul>
+<h3 id="cnn-layers-nnconv2d-and-nnmaxpool2d">CNN Layers: <code>nn.Conv2d</code> and <code>nn.MaxPool2d</code></h3>
+<p><strong>Concept Explanation:</strong></p>
+<ul>
+<li><strong>Convolutional Layers (<code>nn.Conv2d</code>):</strong>
+The core building block of CNNs. They apply a convolution operation to the input, sliding a small filter (kernel) over the input data. This helps capture local patterns like edges, textures, etc.
+<ul>
+<li><strong>Key idea:</strong> Parameter sharing (the same filter is used across different parts of the input image), which reduces the number of parameters compared to fully connected layers on images.</li>
+<li><strong>Input:</strong> Typically a 4D tensor of shape <code>(N, C_in, H_in, W_in)</code> where:
+<ul>
+<li><code>N</code>: Batch size</li>
+<li><code>C_in</code>: Number of input channels (e.g., 3 for RGB images, 1 for grayscale)</li>
+<li><code>H_in</code>: Height of the input feature map</li>
+<li><code>W_in</code>: Width of the input feature map</li>
+</ul>
+</li>
+<li><strong>Output:</strong> A 4D tensor of shape <code>(N, C_out, H_out, W_out)</code> where <code>C_out</code> is the number of output channels (number of filters used). <code>H_out</code> and <code>W_out</code> depend on kernel size, stride, and padding.
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>Key <code>nn.Conv2d</code> Parameters:</strong></p>
+<ul>
+<li><code>in_channels (int)</code>: Number of channels in the input image.</li>
+<li><code>out_channels (int)</code>: Number of channels produced by the convolution (number of filters).</li>
+<li><code>kernel_size (int or tuple)</code>: Size of the convolving kernel.</li>
+<li><code>stride (int or tuple, optional)</code>: Stride of the convolution. Default: 1.</li>
+<li><code>padding (int or tuple, optional)</code>: Zero-padding added to both sides of the input. Default: 0.</li>
+<li><code>dilation (int or tuple, optional)</code>: Spacing between kernel elements. Default: 1.</li>
+<li><code>groups (int, optional)</code>: Number of blocked connections from input channels to output channels (for depthwise separable convolutions, etc.). Default: 1.</li>
+<li><code>bias (bool, optional)</code>: If <code>True</code>, adds a learnable bias to the output. Default: <code>True</code>.</li>
+</ul></div>
+        </div>
+    </div></li>
+</ul>
+</li>
+</ul>
+<h5 id="example">Example:</h5>
+<pre><code>    ```Python
+    import torch
+    import torch.nn as nn
+
+    conv_layer = nn.Conv2d(in_channels=3, out_channels=16, kernel_size=3, stride=1, padding=1)
+    input_tensor = torch.randn(1, 3, 32, 32)  # Batch of 1 RGB image 32x32
+    output = conv_layer(input_tensor)
+    print(output.shape)  # Output shape: (1, 16, 32, 32)
+    ```
+</code></pre>
+<ul>
+<li><strong>Pooling Layers (<code>nn.MaxPool2d</code>):</strong>
+Used to reduce the spatial dimensions (height and width) of the feature maps. This helps reduce computation, control overfitting, and makes the network more robust to variations in the position of features.
+<ul>
+<li><strong>Max Pooling:</strong> Takes the maximum value from a small window (kernel) as it slides over the feature map.</li>
+<li><strong>Input:</strong> Typically a 4D tensor from a convolutional layer.</li>
+<li><strong>Output:</strong> A 4D tensor with reduced <code>H</code> and <code>W</code> dimensions. The number of channels <code>C</code> remains the same.<br>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>Key <code>nn.MaxPool2d</code> Parameters:</strong></p>
+<ul>
+<li><code>kernel_size (int or tuple)</code>: The size of the window to take a max over.</li>
+<li><code>stride (int or tuple, optional)</code>: The stride of the window. Default value is <code>kernel_size</code>.</li>
+<li><code>padding (int or tuple, optional)</code>: Implicit zero padding to be added on both sides. Default: 0.</li>
+<li><code>dilation (int or tuple, optional)</code>: Controls the spacing between the kernel points. Default: 1.</li>
+<li><code>return_indices (bool, optional)</code>: If <code>True</code>, will return the max indices along with the outputs. Useful for <code>MaxUnpool2d</code>. Default: <code>False</code>.</li>
+<li><code>ceil_mode (bool, optional)</code>: When <code>True</code>, will use <code>ceil</code> instead of <code>floor</code> to compute the output shape. Default: <code>False</code>.</li>
+</ul></div>
+        </div>
+    </div></li>
+</ul>
+</li>
+</ul>
+<h5 id="example-1">Example:</h5>
+<pre><code>    ```python
+    pool_layer = nn.MaxPool2d(kernel_size=2, stride=2)
+    pooled_output = pool_layer(output)
+    print(pooled_output.shape)  # Shape: (1, 16, 16, 16)
+    ```
+</code></pre>
+<h4 id="data-handling-in-pytorch">Data Handling in PyTorch:</h4>
+<p>Efficient data handling is crucial for training CNNs. PyTorch provides tools like <code>torchvision.transforms</code> for preprocessing, <code>torch.utils.data.Dataset</code> for custom datasets, and <code>torch.utils.data.DataLoader</code> for batching and shuffling data.</p>
+<ul>
+<li><strong>Transforms</strong>: Convert images to tensors, resize them, and normalize values for effective training.</li>
+<li><strong>Dataset</strong>: Subclass <code>Dataset</code> to load and preprocess data samples.</li>
+<li><strong>DataLoader</strong>: Wraps datasets for batching, shuffling, and parallel loading.</li>
+</ul>
+<p>These components streamline the process of building and training CNNs for tasks like image classification and gaze tracking.</p>
+<h4 id="example-of-data-preprocessing-with-torchvisiontransforms">Example of Data Preprocessing with <code>torchvision.transforms</code>:</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">torchvision</span> <span class="kn">import</span> <span class="n">transforms</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">transform</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">        <span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">((</span><span class="o">&lt;</span><span class="n">HEIGHT</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">WIDTH</span><span class="o">&gt;</span><span class="p">)),</span><span class="c1"># Replace &lt;HEIGHT&gt; and &lt;WIDTH&gt; with desired dimensions</span>
+</span></span><span class="line"><span class="cl">        <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span><span class="c1"># Converts image to tensor</span>
+</span></span><span class="line"><span class="cl">        <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="p">[</span><span class="o">&lt;</span><span class="n">MEAN_R</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">MEAN_G</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">MEAN_B</span><span class="o">&gt;</span><span class="p">],</span><span class="c1"># Replace with dataset-specific mean values</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">std</span><span class="o">=</span><span class="p">[</span><span class="o">&lt;</span><span class="n">STD_R</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">STD_G</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">STD_B</span><span class="o">&gt;</span><span class="p">])</span><span class="c1"># Replace with dataset-specific std deviations</span>
+</span></span><span class="line"><span class="cl">    <span class="p">])</span>
+</span></span></code></pre></div><h3 id="custom-dataset-and-dataloader">Custom Dataset and DataLoader</h3>
+<p>To work with your own images or data, subclass <code>torch.utils.data.Dataset</code> and implement:</p>
+<ul>
+<li>
+<p><strong><code>__len__</code></strong>: Returns dataset size.</p>
+</li>
+<li>
+<p><strong><code>__getitem__</code></strong>: Returns a single sample (image and label), applying transforms.</p>
+</li>
+</ul>
+<p>The DataLoader wraps the dataset and provides batching, shuffling, and parallel loading.</p>
+<h3 id="mini-project-simple-cnn-on-mnist">Mini Project: Simple CNN on MNIST</h3>
+<p>Put it all together by building a simple CNN to classify handwritten digits using the MNIST dataset.</p>
+<ol>
+<li>Load MNIST dataset with transforms (ToTensor, Normalize).</li>
+<li>Define a CNN with Conv2d, ReLU, MaxPool layers.</li>
+<li>Train with CrossEntropyLoss and Adam optimizer.</li>
+<li>Evaluate accuracy on the test set.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-06-13</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://etsubwfeleke.github.io/itracker_cnn/" data-title="PyTorch Eye Blink Tracker Pt.2"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://etsubwfeleke.github.io/itracker_cnn/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://etsubwfeleke.github.io/itracker_cnn/" data-title="PyTorch Eye Blink Tracker Pt.2"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://etsubwfeleke.github.io/itracker_cnn/" data-title="PyTorch Eye Blink Tracker Pt.2"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://etsubwfeleke.github.io/itracker_cnn/" data-title="PyTorch Eye Blink Tracker Pt.2" data-image="images/eyeblink_project/minst.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/itracker/" class="prev" rel="prev" title="PyTorch Eye Blink Tracker Pt.1"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>PyTorch Eye Blink Tracker Pt.1</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.147.7">Hugo</a> | Theme - <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="noopener noreffer" title="KeepIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> KeepIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
