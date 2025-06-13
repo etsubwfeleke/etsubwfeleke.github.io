@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Etsub Feleke</title>
+    <link>https://etsubwfeleke.github.io/categories/python/</link>
+    <description>Recent content in Python on Etsub Feleke</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Jun 2025 16:26:52 -0500</lastBuildDate>
+    <atom:link href="https://etsubwfeleke.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PyTorch Eye Blink Tracker Pt.2</title>
+      <link>https://etsubwfeleke.github.io/itracker_cnn/</link>
+      <pubDate>Fri, 13 Jun 2025 16:26:52 -0500</pubDate>
+      <guid>https://etsubwfeleke.github.io/itracker_cnn/</guid>
+      <description>&lt;h2 id=&#34;cnn-data-handling-and-minst-dataset&#34;&gt;CNN, Data Handling and MINST dataset&lt;/h2&gt;&#xA;&lt;p&gt;In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.&lt;/p&gt;&#xA;&lt;h3 id=&#34;convolutional-neural-networks-cnns&#34;&gt;Convolutional Neural Networks (CNNs)&lt;/h3&gt;&#xA;&lt;p&gt;CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
