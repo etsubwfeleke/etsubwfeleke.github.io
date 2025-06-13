@@ -1,30 +1,59 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - Etusb</title>
+        <title>All Posts - Etsub Feleke</title>
         <link>https://etsubwfeleke.github.io/posts/</link>
-        <description>All Posts | Etusb</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 02 Jun 2025 19:03:21 -0500</lastBuildDate><atom:link href="https://etsubwfeleke.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Affordable Europe</title>
+        <description>All Posts | Etsub Feleke</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 13 Jun 2025 16:26:52 -0500</lastBuildDate><atom:link href="https://etsubwfeleke.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>PyTorch Eye Blink Tracker Pt.2</title>
+    <link>https://etsubwfeleke.github.io/itracker_cnn/</link>
+    <pubDate>Fri, 13 Jun 2025 16:26:52 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://etsubwfeleke.github.io/itracker_cnn/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/eyeblink_project/minst.png" referrerpolicy="no-referrer">
+            </div><h2 id="cnn-data-handling-and-minst-dataset">CNN, Data Handling and MINST dataset</h2>
+<p>In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.</p>
+<h3 id="convolutional-neural-networks-cnns">Convolutional Neural Networks (CNNs)</h3>
+<p>CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.</p>]]></description>
+</item>
+<item>
+    <title>PyTorch Eye Blink Tracker Pt.1</title>
+    <link>https://etsubwfeleke.github.io/itracker/</link>
+    <pubDate>Thu, 05 Jun 2025 20:46:35 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://etsubwfeleke.github.io/itracker/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/eyeblink_project/CNN.png" referrerpolicy="no-referrer">
+            </div><h2 id="pytorch-fundamentals">PyTorch Fundamentals</h2>
+<p>Before delving into the depths of deep learning—pun intended—it&rsquo;s crucial to grasp the foundational aspects that pave the way. This will be a journal of sorts to document my learning experience as I figure out how to build an eye blink tracker using PyTorch from scratch.</p>
+<h2 id="what-is-pytorch">What is PyTorch?</h2>
+<p>PyTorch is a powerful open-source machine learning library that provides a flexible and efficient platform for building deep learning models. It is particularly well-suited for tasks involving computer vision, natural language processing, and reinforcement learning.
+PyTorch operates on tensors, akin to numpy arrays but optimized for GPU-accelerated computing. This efficiency boost—up to 100 times faster than CPUs—is due to GPUs&rsquo; inherent computational prowess.
+hugo</p>]]></description>
+</item>
+<item>
+    <title>Affordable Education in Europe</title>
     <link>https://etsubwfeleke.github.io/affordable-europe/</link>
     <pubDate>Sun, 02 Mar 2025 20:46:35 -0500</pubDate>
     <author>Author</author>
     <guid>https://etsubwfeleke.github.io/affordable-europe/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/europe-schools/featured-image.png" referrerpolicy="no-referrer">
-            </div><h2 id="-affordable-european-countries-vs-education-quality-the-best-bang-for-your-buck">📊 Affordable European Countries vs. Education Quality: The Best Bang for Your Buck</h2>
-<h2 id="-introduction">🎓 Introduction</h2>
+            </div><h2 id="affordable-education-in-europe-vs-education-quality">Affordable Education in Europe vs. Education Quality:</h2>
+<p><em><strong>The Best Bang for Your Buck</strong></em></p>
+<h2 id="introduction">Introduction</h2>
 <p>Hello <strong>#DataFam</strong>!</p>
 <p>I’m thrilled to share my <strong>first-ever personal data visualization project</strong> created during my data visualization course at the <strong>University of North Texas</strong>! In this project, I analyzed a dataset that explores <strong>education expenses across European countries</strong>, focusing on how affordability correlates with <strong>education quality</strong>.</p>
 <hr>
-<h2 id="-research-questions">🔍 Research Questions</h2>
+<h2 id="research-questions">Research Questions</h2>
 <ol>
 <li>Which countries provide the most <strong>budget-friendly</strong> education options, considering tuition <strong>and</strong> living costs?</li>
 <li>What is the <strong>average tuition fee</strong> across these countries?</li>
 <li>How does the <strong>cost</strong> compare to the <strong>quality</strong> of education provided?</li>
 </ol>
 <hr>
-<h2 id="-key-insights">💡 Key Insights</h2>
-<p>✅ <strong>Cost &amp; Living Expenses Matter</strong>: When considering affordable education in Europe, both <strong>tuition fees</strong> and <strong>living costs</strong> must be considered together.</p>]]></description>
+<h2 id="key-insights">Key Insights</h2>
+<p><strong>Cost &amp; Living Expenses Matter</strong>: When considering affordable education in Europe, both <strong>tuition fees</strong> and <strong>living costs</strong> must be considered together.</p>]]></description>
 </item>
 </channel>
 </rss>
