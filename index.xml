@@ -3,9 +3,20 @@
         <title>Etsub Feleke</title>
         <link>https://etsubwfeleke.github.io/</link>
         <description>This is my KeepIt site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 13 Jun 2025 16:26:52 -0500</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 14 Jun 2025 15:47:30 -0500</lastBuildDate>
             <atom:link href="https://etsubwfeleke.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Building Database Management System Using SQL</title>
+    <link>https://etsubwfeleke.github.io/dbms_sql/</link>
+    <pubDate>Sat, 14 Jun 2025 15:47:30 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://etsubwfeleke.github.io/dbms_sql/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/dbms/dbms_sql.png" referrerpolicy="no-referrer">
+            </div><h2 id="building-a-hotel-management-database-system-a-learning-journey">Building a Hotel Management Database System: A Learning Journey</h2>
+<p>In the dynamic world of hospitality, efficient data management is key to seamless operations, from guest reservations to staff scheduling. As part of my hands-on journey to deepen my backend development and SQL skills, I embarked on designing and implementing a comprehensive Hotel Management System. This project wasn&rsquo;t just about building a system; it was about immersing myself in the practical aspects of relational database design, query optimization, and the intricacies of bringing business logic to life with SQL.</p>]]></description>
+</item>
+<item>
     <title>PyTorch Eye Blink Tracker Pt.2</title>
     <link>https://etsubwfeleke.github.io/itracker_cnn/</link>
     <pubDate>Fri, 13 Jun 2025 16:26:52 -0500</pubDate>
@@ -44,7 +55,7 @@ hugo</p>]]></description>
             </div><p>As part of my data science journey, I took on a challenge that blends environmental urgency with machine learning: forecasting global CO₂ emissions. Using a Kaggle dataset spanning over 200 years and covering 190+ countries, I explored time-series forecasting techniques to understand historical patterns and predict future emissions. With models like Random Forest and ARIMA, I experimented, learned, and iterated—uncovering both the power and limitations of predictive modeling in the climate domain.</p>]]></description>
 </item>
 <item>
-    <title>Predictive_modeling</title>
+    <title>Predictive modeling</title>
     <link>https://etsubwfeleke.github.io/predictive_modeling/</link>
     <pubDate>Fri, 14 Mar 2025 14:18:53 -0500</pubDate>
     <author>Author</author>
@@ -80,7 +91,7 @@ hugo</p>]]></description>
 <p><strong>Cost &amp; Living Expenses Matter</strong>: When considering affordable education in Europe, both <strong>tuition fees</strong> and <strong>living costs</strong> must be considered together.</p>]]></description>
 </item>
 <item>
-    <title>Web_scraping</title>
+    <title>Web scraping with Beautiful Soup</title>
     <link>https://etsubwfeleke.github.io/web_scraping/</link>
     <pubDate>Thu, 14 Nov 2024 14:51:06 -0500</pubDate>
     <author>Author</author>

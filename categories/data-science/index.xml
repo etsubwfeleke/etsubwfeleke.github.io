@@ -9,14 +9,14 @@
     <lastBuildDate>Fri, 14 Mar 2025 14:18:53 -0500</lastBuildDate>
     <atom:link href="https://etsubwfeleke.github.io/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Predictive_modeling</title>
+      <title>Predictive modeling</title>
       <link>https://etsubwfeleke.github.io/predictive_modeling/</link>
       <pubDate>Fri, 14 Mar 2025 14:18:53 -0500</pubDate>
       <guid>https://etsubwfeleke.github.io/predictive_modeling/</guid>
       <description>&lt;h2 id=&#34;learning-to-predict-housing-market-trends-with-machine-learning&#34;&gt;Learning to Predict Housing Market Trends with Machine Learning&lt;/h2&gt;&#xA;&lt;p&gt;In the competitive world of real estate, understanding market trends and forecasting sales performance can lead to smarter investment decisions and better risk planning. As part of my self-guided learning in predictive modeling, I explored housing market data to simulate the kind of analysis a real estate analytics team might perform.&lt;/p&gt;&#xA;&lt;p&gt;Using a global housing market dataset from Kaggle (2015–2024), I applied machine learning techniques to build models that could forecast sales trends and surface key drivers of market movement. The goal was to push beyond theory and create something with real-world relevance—and showcase how data science can inform strategic decisions.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Web_scraping</title>
+      <title>Web scraping with Beautiful Soup</title>
       <link>https://etsubwfeleke.github.io/web_scraping/</link>
       <pubDate>Thu, 14 Nov 2024 14:51:06 -0500</pubDate>
       <guid>https://etsubwfeleke.github.io/web_scraping/</guid>
