@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Etsub Feleke</title>
+    <link>https://etsubwfeleke.github.io/categories/machine-learning/</link>
+    <description>Recent content in Machine Learning on Etsub Feleke</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 05 Apr 2025 20:46:35 -0500</lastBuildDate>
+    <atom:link href="https://etsubwfeleke.github.io/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Global CO₂ Emissions Predictions: A Machine Learning Approach</title>
+      <link>https://etsubwfeleke.github.io/co2_predictions/</link>
+      <pubDate>Sat, 05 Apr 2025 20:46:35 -0500</pubDate>
+      <guid>https://etsubwfeleke.github.io/co2_predictions/</guid>
+      <description>&lt;p&gt;As part of my data science journey, I took on a challenge that blends environmental urgency with machine learning: forecasting global CO₂ emissions. Using a Kaggle dataset spanning over 200 years and covering 190+ countries, I explored time-series forecasting techniques to understand historical patterns and predict future emissions. With models like Random Forest and ARIMA, I experimented, learned, and iterated—uncovering both the power and limitations of predictive modeling in the climate domain.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
