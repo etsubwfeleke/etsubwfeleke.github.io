@@ -57,5 +57,13 @@ hugo</p>]]></description>
 <h2 id="key-insights">Key Insights</h2>
 <p><strong>Cost &amp; Living Expenses Matter</strong>: When considering affordable education in Europe, both <strong>tuition fees</strong> and <strong>living costs</strong> must be considered together.</p>]]></description>
 </item>
+<item>
+    <title></title>
+    <link>https://etsubwfeleke.github.io/co2_predictions/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://etsubwfeleke.github.io/co2_predictions/</guid>
+    <description><![CDATA[<p>As part of my data science journey, I took on a challenge that blends environmental urgency with machine learning: forecasting global CO₂ emissions. Using a Kaggle dataset spanning over 200 years and covering 190+ countries, I explored time-series forecasting techniques to understand historical patterns and predict future emissions. With models like Random Forest and ARIMA, I experimented, learned, and iterated—uncovering both the power and limitations of predictive modeling in the climate domain.</p>]]></description>
+</item>
 </channel>
 </rss>
