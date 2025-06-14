@@ -6,36 +6,8 @@
     <description>Recent content in Categories on Etsub Feleke</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Jun 2025 15:47:30 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 13 Jun 2025 16:26:52 -0500</lastBuildDate>
     <atom:link href="https://etsubwfeleke.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Backend Development</title>
-      <link>https://etsubwfeleke.github.io/categories/backend-development/</link>
-      <pubDate>Sat, 14 Jun 2025 15:47:30 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/backend-development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Database Design</title>
-      <link>https://etsubwfeleke.github.io/categories/database-design/</link>
-      <pubDate>Sat, 14 Jun 2025 15:47:30 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/database-design/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>PostgreSQL</title>
-      <link>https://etsubwfeleke.github.io/categories/postgresql/</link>
-      <pubDate>Sat, 14 Jun 2025 15:47:30 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/postgresql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SQL</title>
-      <link>https://etsubwfeleke.github.io/categories/sql/</link>
-      <pubDate>Sat, 14 Jun 2025 15:47:30 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/sql/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Deep Learning</title>
       <link>https://etsubwfeleke.github.io/categories/deep-learning/</link>
@@ -104,6 +76,34 @@
       <link>https://etsubwfeleke.github.io/categories/web-scraping/</link>
       <pubDate>Thu, 14 Nov 2024 14:51:06 -0500</pubDate>
       <guid>https://etsubwfeleke.github.io/categories/web-scraping/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backend Development</title>
+      <link>https://etsubwfeleke.github.io/categories/backend-development/</link>
+      <pubDate>Wed, 14 Aug 2024 15:47:30 -0500</pubDate>
+      <guid>https://etsubwfeleke.github.io/categories/backend-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database Design</title>
+      <link>https://etsubwfeleke.github.io/categories/database-design/</link>
+      <pubDate>Wed, 14 Aug 2024 15:47:30 -0500</pubDate>
+      <guid>https://etsubwfeleke.github.io/categories/database-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://etsubwfeleke.github.io/categories/postgresql/</link>
+      <pubDate>Wed, 14 Aug 2024 15:47:30 -0500</pubDate>
+      <guid>https://etsubwfeleke.github.io/categories/postgresql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQL</title>
+      <link>https://etsubwfeleke.github.io/categories/sql/</link>
+      <pubDate>Wed, 14 Aug 2024 15:47:30 -0500</pubDate>
+      <guid>https://etsubwfeleke.github.io/categories/sql/</guid>
       <description></description>
     </item>
   </channel>
