@@ -42,6 +42,18 @@ hugo</p>]]></description>
             </div><p>As part of my data science journey, I took on a challenge that blends environmental urgency with machine learning: forecasting global CO₂ emissions. Using a Kaggle dataset spanning over 200 years and covering 190+ countries, I explored time-series forecasting techniques to understand historical patterns and predict future emissions. With models like Random Forest and ARIMA, I experimented, learned, and iterated—uncovering both the power and limitations of predictive modeling in the climate domain.</p>]]></description>
 </item>
 <item>
+    <title>Predictive_modeling</title>
+    <link>https://etsubwfeleke.github.io/predictive_modeling/</link>
+    <pubDate>Fri, 14 Mar 2025 14:18:53 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://etsubwfeleke.github.io/predictive_modeling/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/pred_mod/dataset-cover.png" referrerpolicy="no-referrer">
+            </div><h2 id="learning-to-predict-housing-market-trends-with-machine-learning">Learning to Predict Housing Market Trends with Machine Learning</h2>
+<p>In the competitive world of real estate, understanding market trends and forecasting sales performance can lead to smarter investment decisions and better risk planning. As part of my self-guided learning in predictive modeling, I explored housing market data to simulate the kind of analysis a real estate analytics team might perform.</p>
+<p>Using a global housing market dataset from Kaggle (2015–2024), I applied machine learning techniques to build models that could forecast sales trends and surface key drivers of market movement. The goal was to push beyond theory and create something with real-world relevance—and showcase how data science can inform strategic decisions.</p>]]></description>
+</item>
+<item>
     <title>Affordable Education in Europe</title>
     <link>https://etsubwfeleke.github.io/affordable-europe/</link>
     <pubDate>Sun, 02 Mar 2025 20:46:35 -0500</pubDate>
@@ -64,6 +76,19 @@ hugo</p>]]></description>
 <hr>
 <h2 id="key-insights">Key Insights</h2>
 <p><strong>Cost &amp; Living Expenses Matter</strong>: When considering affordable education in Europe, both <strong>tuition fees</strong> and <strong>living costs</strong> must be considered together.</p>]]></description>
+</item>
+<item>
+    <title>Web_scraping</title>
+    <link>https://etsubwfeleke.github.io/web_scraping/</link>
+    <pubDate>Thu, 14 Nov 2024 14:51:06 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://etsubwfeleke.github.io/web_scraping/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/web_scraping/beautifulsoup.png" referrerpolicy="no-referrer">
+            </div><h2 id="exploring-web-scraping-with-beautiful-soup-and-requests-a-learning-journey">Exploring Web Scraping with Beautiful Soup and Requests: A Learning Journey</h2>
+<p>Understanding web scraping techniques is essential for data science. The goal was to extract structured data from a real-world website, specifically focusing on the World Economic Forum&rsquo;s Wikipedia page. This hands-on experience allowed me to learn how to programmatically interact with web content and parse HTML to gather information.</p>
+<h3 id="the-tools-requests-and-beautiful-soup">The Tools: Requests and Beautiful Soup</h3>
+<p>I chose to use two powerful Python libraries for this project: <code>requests</code> for making HTTP requests to fetch web pages, and <code>BeautifulSoup</code> for parsing the HTML content.</p>]]></description>
 </item>
 </channel>
 </rss>
