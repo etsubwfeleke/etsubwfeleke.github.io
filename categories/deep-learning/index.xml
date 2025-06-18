@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deep Learning on Etsub Feleke</title>
-    <link>https://etsubwfeleke.github.io/categories/deep-learning/</link>
+    <link>http://localhost:1313/categories/deep-learning/</link>
     <description>Recent content in Deep Learning on Etsub Feleke</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 13 Jun 2025 16:26:52 -0500</lastBuildDate>
-    <atom:link href="https://etsubwfeleke.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PyTorch Eye Blink Tracker Pt.2</title>
-      <link>https://etsubwfeleke.github.io/itracker_cnn/</link>
+      <link>http://localhost:1313/itracker_cnn/</link>
       <pubDate>Fri, 13 Jun 2025 16:26:52 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/itracker_cnn/</guid>
+      <guid>http://localhost:1313/itracker_cnn/</guid>
       <description>&lt;h2 id=&#34;cnn-data-handling-and-minst-dataset&#34;&gt;CNN, Data Handling and MINST dataset&lt;/h2&gt;&#xA;&lt;p&gt;In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.&lt;/p&gt;&#xA;&lt;h3 id=&#34;convolutional-neural-networks-cnns&#34;&gt;Convolutional Neural Networks (CNNs)&lt;/h3&gt;&#xA;&lt;p&gt;CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.&lt;/p&gt;</description>
     </item>
     <item>
       <title>PyTorch Eye Blink Tracker Pt.1</title>
-      <link>https://etsubwfeleke.github.io/itracker/</link>
+      <link>http://localhost:1313/itracker/</link>
       <pubDate>Thu, 05 Jun 2025 20:46:35 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/itracker/</guid>
+      <guid>http://localhost:1313/itracker/</guid>
       <description>&lt;h2 id=&#34;pytorch-fundamentals&#34;&gt;PyTorch Fundamentals&lt;/h2&gt;&#xA;&lt;p&gt;Before delving into the depths of deep learning—pun intended—it&amp;rsquo;s crucial to grasp the foundational aspects that pave the way. This will be a journal of sorts to document my learning experience as I figure out how to build an eye blink tracker using PyTorch from scratch.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-pytorch&#34;&gt;What is PyTorch?&lt;/h2&gt;&#xA;&lt;p&gt;PyTorch is a powerful open-source machine learning library that provides a flexible and efficient platform for building deep learning models. It is particularly well-suited for tasks involving computer vision, natural language processing, and reinforcement learning.&#xA;PyTorch operates on tensors, akin to numpy arrays but optimized for GPU-accelerated computing. This efficiency boost—up to 100 times faster than CPUs—is due to GPUs&amp;rsquo; inherent computational prowess.&#xA;hugo&lt;/p&gt;</description>
     </item>
   </channel>

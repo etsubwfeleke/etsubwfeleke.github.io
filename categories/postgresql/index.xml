@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PostgreSQL on Etsub Feleke</title>
-    <link>https://etsubwfeleke.github.io/categories/postgresql/</link>
+    <link>http://localhost:1313/categories/postgresql/</link>
     <description>Recent content in PostgreSQL on Etsub Feleke</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 14 Aug 2024 15:47:30 -0500</lastBuildDate>
-    <atom:link href="https://etsubwfeleke.github.io/categories/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/postgresql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Database Management System Using SQL</title>
-      <link>https://etsubwfeleke.github.io/dbms_sql/</link>
+      <link>http://localhost:1313/dbms_sql/</link>
       <pubDate>Wed, 14 Aug 2024 15:47:30 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/dbms_sql/</guid>
+      <guid>http://localhost:1313/dbms_sql/</guid>
       <description>&lt;h2 id=&#34;building-a-hotel-management-database-system-a-learning-journey&#34;&gt;Building a Hotel Management Database System: A Learning Journey&lt;/h2&gt;&#xA;&lt;p&gt;In the dynamic world of hospitality, efficient data management is key to seamless operations, from guest reservations to staff scheduling. As part of my hands-on journey to deepen my backend development and SQL skills, I embarked on designing and implementing a comprehensive Hotel Management System. This project wasn&amp;rsquo;t just about building a system; it was about immersing myself in the practical aspects of relational database design, query optimization, and the intricacies of bringing business logic to life with SQL.&lt;/p&gt;</description>
     </item>
   </channel>

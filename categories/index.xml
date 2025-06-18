@@ -9,45 +9,10 @@
     <lastBuildDate>Fri, 13 Jun 2025 16:26:52 -0500</lastBuildDate>
     <atom:link href="https://etsubwfeleke.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Deep Learning</title>
-      <link>https://etsubwfeleke.github.io/categories/deep-learning/</link>
-      <pubDate>Fri, 13 Jun 2025 16:26:52 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/deep-learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>https://etsubwfeleke.github.io/categories/python/</link>
-      <pubDate>Fri, 13 Jun 2025 16:26:52 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>PyTorch</title>
-      <link>https://etsubwfeleke.github.io/categories/pytorch/</link>
-      <pubDate>Fri, 13 Jun 2025 16:26:52 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/pytorch/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Climate Change</title>
-      <link>https://etsubwfeleke.github.io/categories/climate-change/</link>
-      <pubDate>Sat, 05 Apr 2025 20:46:35 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/climate-change/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Machine Learning</title>
       <link>https://etsubwfeleke.github.io/categories/machine-learning/</link>
-      <pubDate>Sat, 05 Apr 2025 20:46:35 -0500</pubDate>
+      <pubDate>Fri, 13 Jun 2025 16:26:52 -0500</pubDate>
       <guid>https://etsubwfeleke.github.io/categories/machine-learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Data Science</title>
-      <link>https://etsubwfeleke.github.io/categories/data-science/</link>
-      <pubDate>Fri, 14 Mar 2025 14:18:53 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/data-science/</guid>
       <description></description>
     </item>
     <item>
@@ -58,45 +23,10 @@
       <description></description>
     </item>
     <item>
-      <title>Education</title>
-      <link>https://etsubwfeleke.github.io/categories/education/</link>
-      <pubDate>Sun, 02 Mar 2025 20:46:35 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/education/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tableau</title>
-      <link>https://etsubwfeleke.github.io/categories/tableau/</link>
-      <pubDate>Sun, 02 Mar 2025 20:46:35 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/tableau/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web Scraping</title>
-      <link>https://etsubwfeleke.github.io/categories/web-scraping/</link>
+      <title>Python</title>
+      <link>https://etsubwfeleke.github.io/categories/python/</link>
       <pubDate>Thu, 14 Nov 2024 14:51:06 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/web-scraping/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Backend Development</title>
-      <link>https://etsubwfeleke.github.io/categories/backend-development/</link>
-      <pubDate>Wed, 14 Aug 2024 15:47:30 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/backend-development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Database Design</title>
-      <link>https://etsubwfeleke.github.io/categories/database-design/</link>
-      <pubDate>Wed, 14 Aug 2024 15:47:30 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/database-design/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>PostgreSQL</title>
-      <link>https://etsubwfeleke.github.io/categories/postgresql/</link>
-      <pubDate>Wed, 14 Aug 2024 15:47:30 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/categories/postgresql/</guid>
+      <guid>https://etsubwfeleke.github.io/categories/python/</guid>
       <description></description>
     </item>
     <item>
