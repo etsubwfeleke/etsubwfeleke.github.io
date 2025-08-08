@@ -11,7 +11,7 @@
     <guid>http://localhost:1313/final_itracker/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/i-tracker.png" referrerpolicy="no-referrer">
-            </div><h1 id="eye-tracking-for-everyone-final-implementation-phase">Eye Tracking for Everyone: Final Implementation Phase</h1>
+            </div><h2 id="eye-tracking-for-everyone-final-implementation-phase">Eye Tracking for Everyone: Final Implementation Phase</h2>
 <p>In this final blog post of our iTracker series, I&rsquo;ll walk you through the complete implementation of our eye-tracking model using PyTorch. This post covers the full architecture, training process, and results of our gaze estimation system.</p>
 <h2 id="project-overview">Project Overview</h2>
 <p>The implementation provides a complete pipeline for eye gaze tracking, built on PyTorch and utilizing the GazeCapture dataset. The system can predict where a person is looking on a screen using just their face and eye images. You can find the complete implementation in my <a href="https://github.com/etsubwfeleke/I-Tracker" target="_blank" rel="noopener noreffer">GitHub repository</a>
