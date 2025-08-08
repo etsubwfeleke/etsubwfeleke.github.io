@@ -1,29 +1,44 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Etsub Feleke</title>
-        <link>https://etsubwfeleke.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description>This is my KeepIt site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 13 Jun 2025 16:26:52 -0500</lastBuildDate>
-            <atom:link href="https://etsubwfeleke.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Aug 2025 16:07:25 -0500</lastBuildDate>
+            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Final Eye Blink Tracker Implementation</title>
+    <link>http://localhost:1313/final_itracker/</link>
+    <pubDate>Thu, 07 Aug 2025 16:07:25 -0500</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/final_itracker/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/i-tracker.png" referrerpolicy="no-referrer">
+            </div><h2 id="eye-tracking-for-everyone-final-implementation-phase">Eye Tracking for Everyone: Final Implementation Phase</h2>
+<p>In this final blog post of our iTracker series, I&rsquo;ll walk you through the complete implementation of our eye-tracking model using PyTorch. This post covers the full architecture, training process, and results of our gaze estimation system.</p>
+<h2 id="project-overview">Project Overview</h2>
+<p>The implementation provides a complete pipeline for eye gaze tracking, built on PyTorch and utilizing the GazeCapture dataset. The system can predict where a person is looking on a screen using just their face and eye images. You can find the complete implementation in my <a href="https://github.com/etsubwfeleke/I-Tracker" target="_blank" rel="noopener noreffer">GitHub repository</a>
+.</p>]]></description>
+</item>
+<item>
     <title>PyTorch Eye Blink Tracker Pt.2</title>
-    <link>https://etsubwfeleke.github.io/itracker_cnn/</link>
+    <link>http://localhost:1313/itracker_cnn/</link>
     <pubDate>Fri, 13 Jun 2025 16:26:52 -0500</pubDate>
     <author>Author</author>
-    <guid>https://etsubwfeleke.github.io/itracker_cnn/</guid>
+    <guid>http://localhost:1313/itracker_cnn/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/eyeblink_project/minst.png" referrerpolicy="no-referrer">
             </div><h2 id="cnn-data-handling-and-minst-dataset">CNN, Data Handling and MINST dataset</h2>
-<p>In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.</p>
-<h3 id="convolutional-neural-networks-cnns">Convolutional Neural Networks (CNNs)</h3>
-<p>CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.</p>]]></description>
+<p>In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.
+<a href="https://www.ibm.com/think/topics/convolutional-neural-networks" target="_blank" rel="noopener noreffer">### Convolutional Neural Networks (CNNs)</a>
+
+CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.</p>]]></description>
 </item>
 <item>
     <title>PyTorch Eye Blink Tracker Pt.1</title>
-    <link>https://etsubwfeleke.github.io/itracker/</link>
+    <link>http://localhost:1313/itracker/</link>
     <pubDate>Thu, 05 Jun 2025 20:46:35 -0500</pubDate>
     <author>Author</author>
-    <guid>https://etsubwfeleke.github.io/itracker/</guid>
+    <guid>http://localhost:1313/itracker/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/eyeblink_project/CNN.png" referrerpolicy="no-referrer">
             </div><h2 id="pytorch-fundamentals">PyTorch Fundamentals</h2>
@@ -35,20 +50,20 @@ hugo</p>]]></description>
 </item>
 <item>
     <title>Global CO₂ Emissions Predictions: A Machine Learning Approach</title>
-    <link>https://etsubwfeleke.github.io/co2_predictions/</link>
+    <link>http://localhost:1313/co2_predictions/</link>
     <pubDate>Sat, 05 Apr 2025 20:46:35 -0500</pubDate>
     <author>Author</author>
-    <guid>https://etsubwfeleke.github.io/co2_predictions/</guid>
+    <guid>http://localhost:1313/co2_predictions/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/co2/co2.jpg" referrerpolicy="no-referrer">
             </div><p>As part of my data science journey, I took on a challenge that blends environmental urgency with machine learning: forecasting global CO₂ emissions. Using a Kaggle dataset spanning over 200 years and covering 190+ countries, I explored time-series forecasting techniques to understand historical patterns and predict future emissions. With models like Random Forest and ARIMA, I experimented, learned, and iterated—uncovering both the power and limitations of predictive modeling in the climate domain.</p>]]></description>
 </item>
 <item>
     <title>Predictive modeling</title>
-    <link>https://etsubwfeleke.github.io/predictive_modeling/</link>
+    <link>http://localhost:1313/predictive_modeling/</link>
     <pubDate>Fri, 14 Mar 2025 14:18:53 -0500</pubDate>
     <author>Author</author>
-    <guid>https://etsubwfeleke.github.io/predictive_modeling/</guid>
+    <guid>http://localhost:1313/predictive_modeling/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/pred_mod/dataset-cover.png" referrerpolicy="no-referrer">
             </div><h2 id="learning-to-predict-housing-market-trends-with-machine-learning">Learning to Predict Housing Market Trends with Machine Learning</h2>
@@ -57,10 +72,10 @@ hugo</p>]]></description>
 </item>
 <item>
     <title>Affordable Education in Europe</title>
-    <link>https://etsubwfeleke.github.io/affordable-europe/</link>
+    <link>http://localhost:1313/affordable-europe/</link>
     <pubDate>Sun, 02 Mar 2025 20:46:35 -0500</pubDate>
     <author>Author</author>
-    <guid>https://etsubwfeleke.github.io/affordable-europe/</guid>
+    <guid>http://localhost:1313/affordable-europe/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/europe-schools/featured-image.png" referrerpolicy="no-referrer">
             </div><h2 id="affordable-education-in-europe-vs-education-quality">Affordable Education in Europe vs. Education Quality:</h2>
@@ -81,10 +96,10 @@ hugo</p>]]></description>
 </item>
 <item>
     <title>Web scraping with Beautiful Soup</title>
-    <link>https://etsubwfeleke.github.io/web_scraping/</link>
+    <link>http://localhost:1313/web_scraping/</link>
     <pubDate>Thu, 14 Nov 2024 14:51:06 -0500</pubDate>
     <author>Author</author>
-    <guid>https://etsubwfeleke.github.io/web_scraping/</guid>
+    <guid>http://localhost:1313/web_scraping/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/web_scraping/beautifulsoup.png" referrerpolicy="no-referrer">
             </div><h2 id="exploring-web-scraping-with-beautiful-soup-and-requests-a-learning-journey">Exploring Web Scraping with Beautiful Soup and Requests: A Learning Journey</h2>
@@ -94,10 +109,10 @@ hugo</p>]]></description>
 </item>
 <item>
     <title>Building Database Management System Using SQL</title>
-    <link>https://etsubwfeleke.github.io/dbms_sql/</link>
+    <link>http://localhost:1313/dbms_sql/</link>
     <pubDate>Wed, 14 Aug 2024 15:47:30 -0500</pubDate>
     <author>Author</author>
-    <guid>https://etsubwfeleke.github.io/dbms_sql/</guid>
+    <guid>http://localhost:1313/dbms_sql/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/dbms/dbms_sql.png" referrerpolicy="no-referrer">
             </div><h2 id="building-a-hotel-management-database-system-a-learning-journey">Building a Hotel Management Database System: A Learning Journey</h2>

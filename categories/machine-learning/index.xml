@@ -2,38 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Machine Learning on Etsub Feleke</title>
-    <link>https://etsubwfeleke.github.io/categories/machine-learning/</link>
+    <link>http://localhost:1313/categories/machine-learning/</link>
     <description>Recent content in Machine Learning on Etsub Feleke</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Jun 2025 16:26:52 -0500</lastBuildDate>
-    <atom:link href="https://etsubwfeleke.github.io/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Aug 2025 16:07:25 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Final Eye Blink Tracker Implementation</title>
+      <link>http://localhost:1313/final_itracker/</link>
+      <pubDate>Thu, 07 Aug 2025 16:07:25 -0500</pubDate>
+      <guid>http://localhost:1313/final_itracker/</guid>
+      <description>&lt;h1 id=&#34;eye-tracking-for-everyone-final-implementation-phase&#34;&gt;Eye Tracking for Everyone: Final Implementation Phase&lt;/h1&gt;&#xA;&lt;p&gt;In this final blog post of our iTracker series, I&amp;rsquo;ll walk you through the complete implementation of our eye-tracking model using PyTorch. This post covers the full architecture, training process, and results of our gaze estimation system.&lt;/p&gt;&#xA;&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;The implementation provides a complete pipeline for eye gaze tracking, built on PyTorch and utilizing the GazeCapture dataset. The system can predict where a person is looking on a screen using just their face and eye images. You can find the complete implementation in my &lt;a href=&#34;https://github.com/etsubwfeleke/I-Tracker&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer&#34;&gt;GitHub repository&lt;/a&gt;&#xA;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>PyTorch Eye Blink Tracker Pt.2</title>
-      <link>https://etsubwfeleke.github.io/itracker_cnn/</link>
+      <link>http://localhost:1313/itracker_cnn/</link>
       <pubDate>Fri, 13 Jun 2025 16:26:52 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/itracker_cnn/</guid>
-      <description>&lt;h2 id=&#34;cnn-data-handling-and-minst-dataset&#34;&gt;CNN, Data Handling and MINST dataset&lt;/h2&gt;&#xA;&lt;p&gt;In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.&lt;/p&gt;&#xA;&lt;h3 id=&#34;convolutional-neural-networks-cnns&#34;&gt;Convolutional Neural Networks (CNNs)&lt;/h3&gt;&#xA;&lt;p&gt;CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/itracker_cnn/</guid>
+      <description>&lt;h2 id=&#34;cnn-data-handling-and-minst-dataset&#34;&gt;CNN, Data Handling and MINST dataset&lt;/h2&gt;&#xA;&lt;p&gt;In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.&#xA;&lt;a href=&#34;https://www.ibm.com/think/topics/convolutional-neural-networks&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer&#34;&gt;### Convolutional Neural Networks (CNNs)&lt;/a&gt;&#xA;&#xA;CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.&lt;/p&gt;</description>
     </item>
     <item>
       <title>PyTorch Eye Blink Tracker Pt.1</title>
-      <link>https://etsubwfeleke.github.io/itracker/</link>
+      <link>http://localhost:1313/itracker/</link>
       <pubDate>Thu, 05 Jun 2025 20:46:35 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/itracker/</guid>
+      <guid>http://localhost:1313/itracker/</guid>
       <description>&lt;h2 id=&#34;pytorch-fundamentals&#34;&gt;PyTorch Fundamentals&lt;/h2&gt;&#xA;&lt;p&gt;Before delving into the depths of deep learning—pun intended—it&amp;rsquo;s crucial to grasp the foundational aspects that pave the way. This will be a journal of sorts to document my learning experience as I figure out how to build an eye blink tracker using PyTorch from scratch.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-pytorch&#34;&gt;What is PyTorch?&lt;/h2&gt;&#xA;&lt;p&gt;PyTorch is a powerful open-source machine learning library that provides a flexible and efficient platform for building deep learning models. It is particularly well-suited for tasks involving computer vision, natural language processing, and reinforcement learning.&#xA;PyTorch operates on tensors, akin to numpy arrays but optimized for GPU-accelerated computing. This efficiency boost—up to 100 times faster than CPUs—is due to GPUs&amp;rsquo; inherent computational prowess.&#xA;hugo&lt;/p&gt;</description>
     </item>
     <item>
       <title>Global CO₂ Emissions Predictions: A Machine Learning Approach</title>
-      <link>https://etsubwfeleke.github.io/co2_predictions/</link>
+      <link>http://localhost:1313/co2_predictions/</link>
       <pubDate>Sat, 05 Apr 2025 20:46:35 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/co2_predictions/</guid>
+      <guid>http://localhost:1313/co2_predictions/</guid>
       <description>&lt;p&gt;As part of my data science journey, I took on a challenge that blends environmental urgency with machine learning: forecasting global CO₂ emissions. Using a Kaggle dataset spanning over 200 years and covering 190+ countries, I explored time-series forecasting techniques to understand historical patterns and predict future emissions. With models like Random Forest and ARIMA, I experimented, learned, and iterated—uncovering both the power and limitations of predictive modeling in the climate domain.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Predictive modeling</title>
-      <link>https://etsubwfeleke.github.io/predictive_modeling/</link>
+      <link>http://localhost:1313/predictive_modeling/</link>
       <pubDate>Fri, 14 Mar 2025 14:18:53 -0500</pubDate>
-      <guid>https://etsubwfeleke.github.io/predictive_modeling/</guid>
+      <guid>http://localhost:1313/predictive_modeling/</guid>
       <description>&lt;h2 id=&#34;learning-to-predict-housing-market-trends-with-machine-learning&#34;&gt;Learning to Predict Housing Market Trends with Machine Learning&lt;/h2&gt;&#xA;&lt;p&gt;In the competitive world of real estate, understanding market trends and forecasting sales performance can lead to smarter investment decisions and better risk planning. As part of my self-guided learning in predictive modeling, I explored housing market data to simulate the kind of analysis a real estate analytics team might perform.&lt;/p&gt;&#xA;&lt;p&gt;Using a global housing market dataset from Kaggle (2015–2024), I applied machine learning techniques to build models that could forecast sales trends and surface key drivers of market movement. The goal was to push beyond theory and create something with real-world relevance—and showcase how data science can inform strategic decisions.&lt;/p&gt;</description>
     </item>
   </channel>

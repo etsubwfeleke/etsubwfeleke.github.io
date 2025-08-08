@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Final Eye Blink Tracker Implementation - Etsub Feleke</title><meta name="Description" content="This is my KeepIt site"><meta property="og:url" content="http://localhost:1313/final_itracker/">
+  <meta property="og:site_name" content="Etsub Feleke">
+  <meta property="og:title" content="Final Eye Blink Tracker Implementation">
+  <meta property="og:description" content="Eye Tracking for Everyone: Final Implementation Phase In this final blog post of our iTracker series, I’ll walk you through the complete implementation of our eye-tracking model using PyTorch. This post covers the full architecture, training process, and results of our gaze estimation system.
+Project Overview The implementation provides a complete pipeline for eye gaze tracking, built on PyTorch and utilizing the GazeCapture dataset. The system can predict where a person is looking on a screen using just their face and eye images. You can find the complete implementation in my GitHub repository .">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-07T16:07:25-05:00">
+    <meta property="article:modified_time" content="2025-08-07T16:07:25-05:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Final Eye Blink Tracker Implementation">
+  <meta name="twitter:description" content="Eye Tracking for Everyone: Final Implementation Phase In this final blog post of our iTracker series, I’ll walk you through the complete implementation of our eye-tracking model using PyTorch. This post covers the full architecture, training process, and results of our gaze estimation system.
+Project Overview The implementation provides a complete pipeline for eye gaze tracking, built on PyTorch and utilizing the GazeCapture dataset. The system can predict where a person is looking on a screen using just their face and eye images. You can find the complete implementation in my GitHub repository .">
+<meta name="application-name" content="Etsub">
+<meta name="apple-mobile-web-app-title" content="Etsub"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#ffffff"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/final_itracker/" /><link rel="prev" href="http://localhost:1313/itracker_cnn/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Final Eye Blink Tracker Implementation",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/final_itracker\/"
+        },"genre": "posts","wordcount":  1052 ,
+        "url": "http:\/\/localhost:1313\/final_itracker\/","datePublished": "2025-08-07T16:07:25-05:00","dateModified": "2025-08-07T16:07:25-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Etsub Feleke">Etsub Feleke</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/posts/"> Archives </a><a class="menu-item" href="/about/"> About Me </a><a class="menu-item" href="https://drive.google.com/file/d/1Gzr1t43CpEgILE04zRZ-dp6TPC9fdcN8/view?usp=drive_link" rel="noopener noreffer" target="_blank"> Resume </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Etsub Feleke">Etsub Feleke</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/posts/" title="">Archives</a><a class="menu-item" href="/about/" title="">About Me</a><a class="menu-item" href="https://drive.google.com/file/d/1Gzr1t43CpEgILE04zRZ-dp6TPC9fdcN8/view?usp=drive_link" title="" rel="noopener noreffer" target="_blank">Resume</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Final Eye Blink Tracker Implementation</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Author</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/machine-learning/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Machine Learning</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-08-07">2025-08-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1052 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/i-tracker.png"
+        data-srcset="/images/i-tracker.png, /images/i-tracker.png 1.5x, /images/i-tracker.png 2x"
+        data-sizes="auto"
+        alt="/images/i-tracker.png"
+        title="/images/i-tracker.png" width="621" height="416" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#eye-tracking-for-everyone-final-implementation-phase">Eye Tracking for Everyone: Final Implementation Phase</a></li>
+    <li><a href="#project-overview">Project Overview</a></li>
+    <li><a href="#key-components">Key Components</a>
+      <ul>
+        <li><a href="#1-data-pipeline">1. Data Pipeline</a></li>
+        <li><a href="#2-model-architecture">2. Model Architecture</a></li>
+        <li><a href="#3-training-pipeline">3. Training Pipeline</a></li>
+      </ul>
+    </li>
+    <li><a href="#implementation-highlights">Implementation Highlights</a>
+      <ul>
+        <li><a href="#gpu-acceleration">GPU Acceleration</a></li>
+        <li><a href="#data-augmentation-and-preprocessing">Data Augmentation and Preprocessing</a></li>
+        <li><a href="#model-training">Model Training</a></li>
+      </ul>
+    </li>
+    <li><a href="#results-and-performance">Results and Performance</a>
+      <ul>
+        <li><a href="#hardware--dataset-statistics">Hardware &amp; Dataset Statistics</a></li>
+        <li><a href="#key-performance-metrics">Key Performance Metrics</a></li>
+        <li><a href="#-training-analysis">📊 Training Analysis</a></li>
+        <li><a href="#areas-for-improvement">Areas for Improvement</a></li>
+      </ul>
+    </li>
+    <li><a href="#future-work">Future Work</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="eye-tracking-for-everyone-final-implementation-phase">Eye Tracking for Everyone: Final Implementation Phase</h2>
+<p>In this final blog post of our iTracker series, I&rsquo;ll walk you through the complete implementation of our eye-tracking model using PyTorch. This post covers the full architecture, training process, and results of our gaze estimation system.</p>
+<h2 id="project-overview">Project Overview</h2>
+<p>The implementation provides a complete pipeline for eye gaze tracking, built on PyTorch and utilizing the GazeCapture dataset. The system can predict where a person is looking on a screen using just their face and eye images. You can find the complete implementation in my <a href="https://github.com/etsubwfeleke/I-Tracker" target="_blank" rel="noopener noreffer">GitHub repository</a>
+.</p>
+<h2 id="key-components">Key Components</h2>
+<h3 id="1-data-pipeline">1. Data Pipeline</h3>
+<p>The data pipeline consists of two main components:</p>
+<p><strong>Data Preparation (<code>prepareDataset.py</code>)</strong></p>
+<ul>
+<li>Processes the raw GazeCapture dataset</li>
+<li>Extracts and crops face and eye images</li>
+<li>Generates face grid representations</li>
+<li>Creates a metadata.mat file containing frame indices, recording numbers, and gaze targets</li>
+</ul>
+<p><strong>Custom Dataset Implementation (<code>DataLoader.py</code>)</strong></p>
+<ul>
+<li>Implements a PyTorch Dataset class for efficient data loading</li>
+<li>Handles image preprocessing and normalization</li>
+<li>Manages train/validation/test splits</li>
+<li>Implements face grid generation on the fly</li>
+</ul>
+<h3 id="2-model-architecture">2. Model Architecture</h3>
+<p>The iTracker model (<code>iTrackerModel.py</code>) implements a multi-stream CNN architecture:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">iTracker</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dropout_rate</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Three parallel CNN branches:</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">left_eye_branch</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">right_eye_branch</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">face_branch</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">face_grid_branch</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">fully_con_layers</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span></code></pre></div><p>Key features:</p>
+<ul>
+<li>Separate CNN branches for left eye, right eye, and face processing</li>
+<li>Face grid processing branch for spatial awareness</li>
+<li>Feature fusion layer combining all streams</li>
+<li>Final regression layers for gaze prediction</li>
+</ul>
+<h3 id="3-training-pipeline">3. Training Pipeline</h3>
+<p>The training system (<code>main.py</code>) includes:</p>
+<ul>
+<li>Apple Silicon GPU support via MPS backend</li>
+<li>Automatic checkpointing of best models</li>
+<li>Comprehensive evaluation metrics</li>
+<li>Hyperparameters:
+<ul>
+<li>Batch size: 50</li>
+<li>Learning rate: 0.001</li>
+<li>Weight decay: 1e-4</li>
+<li>Number of epochs: 100</li>
+</ul>
+</li>
+</ul>
+<h2 id="implementation-highlights">Implementation Highlights</h2>
+<h3 id="gpu-acceleration">GPU Acceleration</h3>
+<p>One of the key features of our implementation is the support for Apple Silicon GPUs through PyTorch&rsquo;s <a href="https://developer.apple.com/metal/pytorch/" target="_blank" rel="noopener noreffer">MPS (Metal Performance Shaders)</a>
+ backend. This optimization allows for significantly faster training times on modern Mac hardware:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">backends</span><span class="o">.</span><span class="n">mps</span><span class="o">.</span><span class="n">is_available</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;mps&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Using MPS backend for Apple Silicon GPU.&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>This implementation choice provides several benefits:</p>
+<ul>
+<li>Native support for Apple M1/M2 chips</li>
+<li>Reduced training time compared to CPU-only processing</li>
+<li>Efficient memory utilization through Metal&rsquo;s optimization</li>
+</ul>
+<h3 id="data-augmentation-and-preprocessing">Data Augmentation and Preprocessing</h3>
+<p>Our data pipeline includes careful preprocessing steps to ensure optimal model performance. Each image stream (face, left eye, right eye) undergoes the following transformations:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="bp">self</span><span class="o">.</span><span class="n">transformFace</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">    <span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">((</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">scalarmean</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mean</span><span class="o">=</span><span class="p">[</span><span class="mf">0.485</span><span class="p">,</span> <span class="mf">0.456</span><span class="p">,</span> <span class="mf">0.406</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">std</span><span class="o">=</span><span class="p">[</span><span class="mf">0.229</span><span class="p">,</span> <span class="mf">0.224</span><span class="p">,</span> <span class="mf">0.225</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">])</span>
+</span></span></code></pre></div><p>Key preprocessing features include:</p>
+<ul>
+<li>Consistent image resizing to 224x224 pixels</li>
+<li>Normalization using ImageNet statistics for transfer learning benefits</li>
+<li>Custom face grid generation for spatial awareness</li>
+<li>Efficient data loading through PyTorch&rsquo;s DataLoader</li>
+</ul>
+<h3 id="model-training">Model Training</h3>
+<p>The training pipeline is designed for robustness and reproducibility, incorporating several best practices:</p>
+<ol>
+<li>
+<p><strong>Loss Function</strong>: We use Mean Square Error (MSE) loss, which is particularly suitable for regression tasks like gaze estimation:</p>
+<ul>
+<li>Provides smooth gradients for optimization</li>
+<li>Natural choice for coordinate prediction</li>
+<li>Easy to interpret in terms of pixel-level accuracy</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimization Strategy</strong>:</p>
+<ul>
+<li>Adam optimizer with carefully tuned parameters</li>
+<li>Learning rate of 0.001 for stable convergence</li>
+<li>Weight decay (1e-4) for regularization</li>
+<li>Batch size of 50 for good gradient estimates</li>
+</ul>
+</li>
+<li>
+<p><strong>Training Loop Features</strong>:</p>
+<ul>
+<li>Regular validation to monitor overfitting</li>
+<li>Automatic model checkpointing</li>
+<li>Early stopping based on validation loss</li>
+<li>Comprehensive logging of metrics</li>
+</ul>
+</li>
+</ol>
+<h2 id="results-and-performance">Results and Performance</h2>
+<p><strong>📈 Training Evolution</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Milestone</th>
+          <th>Training Loss</th>
+          <th>Validation Loss</th>
+          <th>Gaze Error</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Initial</strong> (Epoch 1)</td>
+          <td>33.37</td>
+          <td>31.15</td>
+          <td>55.89°</td>
+      </tr>
+      <tr>
+          <td><strong>Mid-Training</strong> (Epoch 50)</td>
+          <td>~4.5</td>
+          <td>~2.5</td>
+          <td>~10°</td>
+      </tr>
+      <tr>
+          <td><strong>Best</strong> (Epoch 95)</td>
+          <td><strong>3.04</strong></td>
+          <td><strong>1.66</strong></td>
+          <td><strong>8.18°</strong></td>
+      </tr>
+      <tr>
+          <td><strong>Final</strong> (Epoch 100)</td>
+          <td>3.09</td>
+          <td>2.12</td>
+          <td>8.79°</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>🏃‍♂️ Training Progress Timeline</strong></p>
+<pre tabindex="0"><code>
+Loss     │                                  Best Model (Epoch 95)
+33.37    │█                                      ↓
+         │█
+         │█
+~15.0    │ █
+         │  █
+         │   █
+~7.86    │    █
+         │     █        Steady Optimization
+         │      ██████████████████████████████████
+3.04     │                                      █
+         │
+         └───────────────────────────────────────────────-───────────────
+           1    10    20    30    40    50    60    70    80    90   100
+                                  Epochs
+</code></pre><h3 id="hardware--dataset-statistics">Hardware &amp; Dataset Statistics</h3>
+<p><strong>Training Environment</strong></p>
+<ul>
+<li><strong>Platform</strong>: Apple Silicon GPU (MPS backend)</li>
+<li><strong>Dataset Split</strong>:
+<pre tabindex="0"><code>├── Training:   9,089 records (≈2% of full dataset)
+├── Validation: 9,089 records
+└── Test:       2,682 records
+</code></pre></li>
+</ul>
+<h3 id="key-performance-metrics">Key Performance Metrics</h3>
+<p><strong>Best Model Performance (Epoch 95)</strong></p>
+<blockquote>
+<p>📊 <strong>Training Loss</strong>: 3.04<br>
+📊 <strong>Validation Loss</strong>: 1.66<br>
+📊 <strong>Average Gaze Error</strong>: 8.18°</p></blockquote>
+<p><strong>Test Set Performance</strong></p>
+<blockquote>
+<p>⚠️ <strong>Test Loss</strong>: 51.82<br>
+⚠️ <strong>Average Gaze Error</strong>: 53.63°</p></blockquote>
+<h3 id="-training-analysis">📊 Training Analysis</h3>
+<p><strong>Major Milestones</strong></p>
+<ol>
+<li>
+<p><strong>Rapid Initial Improvement</strong> 📈</p>
+<ul>
+<li>First 10 epochs showed dramatic improvement</li>
+<li>Training loss dropped from 33.37 → 7.86</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimization Phase</strong> ⚡</p>
+<ul>
+<li>Steady improvement between epochs 10-50</li>
+<li>Gradual refinement of model parameters</li>
+</ul>
+</li>
+<li>
+<p><strong>Fine-tuning Phase</strong> 🎯</p>
+<ul>
+<li>Best performance at epoch 95</li>
+<li>Validation loss reached minimum of 1.66</li>
+</ul>
+</li>
+</ol>
+<p><strong>Performance Insights</strong></p>
+<p>✅ <strong>Successes</strong>:</p>
+<ul>
+<li>Reduced gaze error by 85% (55.89° → 8.18°)</li>
+<li>Achieved stable training progression</li>
+<li>Maintained consistent validation performance</li>
+</ul>
+<p>⚠️ <strong>Challenges</strong>:</p>
+<ul>
+<li>Significant gap between validation and test performance</li>
+<li>Signs of potential overfitting</li>
+<li>Limited dataset utilization (~2% of full dataset)</li>
+</ul>
+<h3 id="areas-for-improvement">Areas for Improvement</h3>
+<ol>
+<li>
+<p><strong>Data Enhancement</strong></p>
+<ul>
+<li>Expand training to full dataset</li>
+<li>Implement additional augmentation techniques</li>
+<li>Enhance data preprocessing pipeline</li>
+</ul>
+</li>
+<li>
+<p><strong>Model Optimization</strong></p>
+<ul>
+<li>Add regularization layers</li>
+<li>Tune learning rate schedule</li>
+<li>Explore architectural modifications</li>
+</ul>
+</li>
+<li>
+<p><strong>Performance Tuning</strong></p>
+<ul>
+<li>Address validation-test gap</li>
+<li>Improve generalization</li>
+<li>Optimize inference speed</li>
+</ul>
+</li>
+</ol>
+<h2 id="future-work">Future Work</h2>
+<p>The current implementation, while functional, represents only the beginning of what&rsquo;s possible with this eye-tracking system. Here are the key areas for future development:</p>
+<ol>
+<li>
+<p><strong>Expanded Dataset Utilization</strong></p>
+<ul>
+<li>Current implementation uses only ~2% of the full GazeCapture dataset</li>
+<li>Plan to extend training to the complete dataset (&gt;2.4M frames)</li>
+<li>Expect significant improvement in model robustness and accuracy</li>
+</ul>
+</li>
+<li>
+<p><strong>Real-time Implementation</strong></p>
+<ul>
+<li>Develop webcam integration for live gaze tracking</li>
+<li>Optimize inference pipeline for real-time performance</li>
+<li>Implement efficient frame processing and prediction</li>
+</ul>
+</li>
+<li>
+<p><strong>Technical Improvements</strong></p>
+<ul>
+<li>Integration of attention mechanisms</li>
+<li>Performance optimization strategies</li>
+<li>Mobile deployment solutions</li>
+<li>Cross-platform GPU support</li>
+</ul>
+</li>
+<li>
+<p><strong>Model Architecture Enhancements</strong></p>
+<ul>
+<li>Explore architectural modifications to reduce overfitting</li>
+<li>Implement additional data augmentation techniques</li>
+<li>Fine-tune hyperparameters with larger dataset</li>
+</ul>
+</li>
+</ol>
+<p>The immediate focus will be on expanding the training data utilization, as this forms the foundation for more robust real-time applications. Once we achieve better generalization through comprehensive training, we&rsquo;ll move on to implementing real-time webcam tracking capabilities.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://github.com/etsubwfeleke/I-Tracker" target="_blank" rel="noopener noreffer">Complete Implementation on GitHub</a>
+</li>
+<li><a href="https://etsubwfeleke.github.io/itracker_cnn/" target="_blank" rel="noopener noreffer">Previous Blog Posts in the Series</a>
+</li>
+<li><a href="http://gazecapture.csail.mit.edu/" target="_blank" rel="noopener noreffer">GazeCapture Dataset</a>
+</li>
+</ul>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>This implementation builds upon the work presented in:</p>
+<blockquote>
+<p>K.Krafka, A. Khosla, P. Kellnhofer, H. Kannan, S. Bhandarkar, W. Matusik and A. Torralba, &ldquo;Eye Tracking for Everyone&rdquo;, IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016</p></blockquote>
+<p>Special thanks to the CSAIL Vision group for making their dataset and original implementation publicly available.</p>
+<hr>
+<p>This completes our journey of implementing the iTracker model. The full source code, along with detailed documentation, is available in the GitHub repository. Feel free to explore, experiment, and contribute to the project!</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-08-07</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/final_itracker/" data-title="Final Eye Blink Tracker Implementation"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/final_itracker/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/final_itracker/" data-title="Final Eye Blink Tracker Implementation"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/final_itracker/" data-title="Final Eye Blink Tracker Implementation"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/final_itracker/" data-title="Final Eye Blink Tracker Implementation" data-image="images/i-tracker.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/itracker_cnn/" class="prev" rel="prev" title="PyTorch Eye Blink Tracker Pt.2"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>PyTorch Eye Blink Tracker Pt.2</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.147.7">Hugo</a> | Theme - <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="noopener noreffer" title="KeepIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> KeepIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

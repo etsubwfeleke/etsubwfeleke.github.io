@@ -9,11 +9,11 @@
     <lastBuildDate>Mon, 02 Jun 2025 19:03:21 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/intro/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Welcome to My Blog</title>
-      <link>http://localhost:1313/about/</link>
+      <title>My First Post</title>
+      <link>http://localhost:1313/my-first-post/</link>
       <pubDate>Mon, 02 Jun 2025 19:03:21 -0500</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h2 id=&#34;let-me-introduce-myself&#34;&gt;Let me introduce myself!&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;m Etsub Wendwosen, a passionate &lt;strong&gt;Data Science&lt;/strong&gt; graduate student at the University of North Texas (UNT), with a &lt;strong&gt;BA in Economics&lt;/strong&gt;. I have a strong background in &lt;strong&gt;data analysis&lt;/strong&gt;, &lt;strong&gt;machine learning&lt;/strong&gt;, and &lt;strong&gt;statistical modeling&lt;/strong&gt;, and I&amp;rsquo;m actively expanding my expertise in these areas. My goal is to leverage data science to drive informed decisions and contribute to meaningful projects.&lt;/p&gt;&#xA;&lt;h3 id=&#34;my-skills&#34;&gt;My Skills:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Programming Languages&lt;/strong&gt;: Python, SQL&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Data Analysis&lt;/strong&gt;: Pandas, NumPy, Scikit-learn&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Data Visualization&lt;/strong&gt;: Tableau, Power BI&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;: Linear Regression, Random Forest, ARIMA&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Big Data&lt;/strong&gt;: PySpark, Hadoop&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cloud Platforms&lt;/strong&gt;: AWS, Google Cloud&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Jupyter, Git, Docker, VS Code&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;current-focus&#34;&gt;Current Focus:&lt;/h3&gt;&#xA;&lt;p&gt;I&amp;rsquo;m working on several exciting projects, including:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/my-first-post/</guid>
+      <description>&lt;h2 id=&#34;hello&#34;&gt;Hello&lt;/h2&gt;</description>
     </item>
   </channel>
 </rss>

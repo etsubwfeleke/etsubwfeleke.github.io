@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>PyTorch Eye Blink Tracker Pt.2 - Etsub Feleke</title><meta name="Description" content="This is my KeepIt site"><meta property="og:url" content="https://etsubwfeleke.github.io/itracker_cnn/">
+        <title>PyTorch Eye Blink Tracker Pt.2 - Etsub Feleke</title><meta name="Description" content="This is my KeepIt site"><meta property="og:url" content="http://localhost:1313/itracker_cnn/">
   <meta property="og:site_name" content="Etsub Feleke">
   <meta property="og:title" content="PyTorch Eye Blink Tracker Pt.2">
-  <meta property="og:description" content="CNN, Data Handling and MINST dataset In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.
-Convolutional Neural Networks (CNNs) CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.">
+  <meta property="og:description" content="CNN, Data Handling and MINST dataset In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset. ### Convolutional Neural Networks (CNNs) CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -17,12 +16,11 @@ Convolutional Neural Networks (CNNs) CNNs are a type of neural network that are 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="PyTorch Eye Blink Tracker Pt.2">
-  <meta name="twitter:description" content="CNN, Data Handling and MINST dataset In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.
-Convolutional Neural Networks (CNNs) CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.">
+  <meta name="twitter:description" content="CNN, Data Handling and MINST dataset In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset. ### Convolutional Neural Networks (CNNs) CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.">
 <meta name="application-name" content="Etsub">
 <meta name="apple-mobile-web-app-title" content="Etsub"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#ffffff"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://etsubwfeleke.github.io/itracker_cnn/" /><link rel="prev" href="https://etsubwfeleke.github.io/itracker/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/itracker_cnn/" /><link rel="prev" href="http://localhost:1313/itracker/" /><link rel="next" href="http://localhost:1313/final_itracker/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -30,9 +28,9 @@ Convolutional Neural Networks (CNNs) CNNs are a type of neural network that are 
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/etsubwfeleke.github.io\/itracker_cnn\/"
-        },"genre": "posts","wordcount":  1011 ,
-        "url": "https:\/\/etsubwfeleke.github.io\/itracker_cnn\/","datePublished": "2025-06-13T16:26:52-05:00","dateModified": "2025-06-13T16:26:52-05:00","publisher": {
+            "@id": "http:\/\/localhost:1313\/itracker_cnn\/"
+        },"genre": "posts","wordcount":  1023 ,
+        "url": "http:\/\/localhost:1313\/itracker_cnn\/","datePublished": "2025-06-13T16:26:52-05:00","dateModified": "2025-06-13T16:26:52-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -107,7 +105,7 @@ Convolutional Neural Networks (CNNs) CNNs are a type of neural network that are 
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">PyTorch Eye Blink Tracker Pt.2</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Author</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/machine-learning/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Machine Learning</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-06-13">2025-06-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1011 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-06-13">2025-06-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1023 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -125,7 +123,6 @@ Convolutional Neural Networks (CNNs) CNNs are a type of neural network that are 
   <ul>
     <li><a href="#cnn-data-handling-and-minst-dataset">CNN, Data Handling and MINST dataset</a>
       <ul>
-        <li><a href="#convolutional-neural-networks-cnns">Convolutional Neural Networks (CNNs)</a></li>
         <li><a href="#a-quick-overview-of-cnns-and-data-handling-in-pytorch">A Quick Overview of CNNs and Data Handling in PyTorch</a></li>
         <li><a href="#cnn-layers-nnconv2d-and-nnmaxpool2d">CNN Layers: <code>nn.Conv2d</code> and <code>nn.MaxPool2d</code></a></li>
         <li><a href="#custom-dataset-and-dataloader">Custom Dataset and DataLoader</a></li>
@@ -135,9 +132,10 @@ Convolutional Neural Networks (CNNs) CNNs are a type of neural network that are 
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="cnn-data-handling-and-minst-dataset">CNN, Data Handling and MINST dataset</h2>
-<p>In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.</p>
-<h3 id="convolutional-neural-networks-cnns">Convolutional Neural Networks (CNNs)</h3>
-<p>CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.</p>
+<p>In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.
+<a href="https://www.ibm.com/think/topics/convolutional-neural-networks" target="_blank" rel="noopener noreffer">### Convolutional Neural Networks (CNNs)</a>
+
+CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.</p>
 <h3 id="a-quick-overview-of-cnns-and-data-handling-in-pytorch">A Quick Overview of CNNs and Data Handling in PyTorch</h3>
 <p>Convolutional Neural Networks (CNNs) are powerful tools for image-related tasks, leveraging convolutional layers to learn spatial hierarchies of features. They reduce computational complexity through parameter sharing and process images hierarchically, making them robust to spatial variations.</p>
 <h4 id="key-components-of-cnns">Key Components of CNNs:</h4>
@@ -198,17 +196,14 @@ The core building block of CNNs. They apply a convolution operation to the input
 </li>
 </ul>
 <h5 id="example">Example:</h5>
-<pre><code>    ```Python
-    import torch
-    import torch.nn as nn
-
-    conv_layer = nn.Conv2d(in_channels=3, out_channels=16, kernel_size=3, stride=1, padding=1)
-    input_tensor = torch.randn(1, 3, 32, 32)  # Batch of 1 RGB image 32x32
-    output = conv_layer(input_tensor)
-    print(output.shape)  # Output shape: (1, 16, 32, 32)
-    ```
-</code></pre>
-<ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conv_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="n">in_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">out_channels</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">input_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>  <span class="c1"># Batch of 1 RGB image 32x32</span>
+</span></span><span class="line"><span class="cl"><span class="n">output</span> <span class="o">=</span> <span class="n">conv_layer</span><span class="p">(</span><span class="n">input_tensor</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># Output shape: (1, 16, 32, 32)</span>
+</span></span></code></pre></div><ul>
 <li><strong>Pooling Layers (<code>nn.MaxPool2d</code>):</strong>
 Used to reduce the spatial dimensions (height and width) of the feature maps. This helps reduce computation, control overfitting, and makes the network more robust to variations in the position of features.
 <ul>
@@ -235,13 +230,10 @@ Used to reduce the spatial dimensions (height and width) of the feature maps. Th
 </li>
 </ul>
 <h5 id="example-1">Example:</h5>
-<pre><code>    ```python
-    pool_layer = nn.MaxPool2d(kernel_size=2, stride=2)
-    pooled_output = pool_layer(output)
-    print(pooled_output.shape)  # Shape: (1, 16, 16, 16)
-    ```
-</code></pre>
-<h4 id="data-handling-in-pytorch">Data Handling in PyTorch:</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pool_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MaxPool2d</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pooled_output</span> <span class="o">=</span> <span class="n">pool_layer</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">pooled_output</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># Shape: (1, 16, 16, 16)</span>
+</span></span></code></pre></div><h4 id="data-handling-in-pytorch">Data Handling in PyTorch:</h4>
 <p>Efficient data handling is crucial for training CNNs. PyTorch provides tools like <code>torchvision.transforms</code> for preprocessing, <code>torch.utils.data.Dataset</code> for custom datasets, and <code>torch.utils.data.DataLoader</code> for batching and shuffling data.</p>
 <ul>
 <li><strong>Transforms</strong>: Convert images to tensors, resize them, and normalize values for effective training.</li>
@@ -278,15 +270,26 @@ Used to reduce the spatial dimensions (height and width) of the feature maps. Th
 <li>Evaluate accuracy on the test set.</li>
 </ol>
 <p>
-    <a href="https://etsubwfeleke.github.io//jupyter/Minst_notebook.html"
+    <a href="http://localhost:1313//jupyter/Minst_notebook.html"
       >Click here to view this notebook in full screen</a
     >
   </p>
   <iframe
-    src="https://etsubwfeleke.github.io//jupyter/Minst_notebook.html"
+    src="http://localhost:1313//jupyter/Minst_notebook.html"
     style="height:1200px;width:100%;border:none;overflow:hidden;"
     scrolling="no"
   ></iframe>
+<p><strong>Resources:</strong></p>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/scolianni/mnistasjpg/data" target="_blank" rel="noopener noreffer">MNIST Dataset</a>
+</li>
+<li><a href="https://www.geeksforgeeks.org/image-datasets-dataloaders-and-transforms-in-pytorch/" target="_blank" rel="noopener noreffer">Image datasets, Dataloader, and transforms in PyTorch</a>
+</li>
+<li><a href="https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/" target="_blank" rel="noopener noreffer">Loss Functions</a>
+</li>
+<li><a href="https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html" target="_blank" rel="noopener noreffer">PyTorch CNN Tutorial</a>
+</li>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -296,7 +299,7 @@ Used to reduce the spatial dimensions (height and width) of the feature maps. Th
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://etsubwfeleke.github.io/itracker_cnn/" data-title="PyTorch Eye Blink Tracker Pt.2"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://etsubwfeleke.github.io/itracker_cnn/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://etsubwfeleke.github.io/itracker_cnn/" data-title="PyTorch Eye Blink Tracker Pt.2"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://etsubwfeleke.github.io/itracker_cnn/" data-title="PyTorch Eye Blink Tracker Pt.2"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://etsubwfeleke.github.io/itracker_cnn/" data-title="PyTorch Eye Blink Tracker Pt.2" data-image="images/eyeblink_project/minst.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/itracker_cnn/" data-title="PyTorch Eye Blink Tracker Pt.2"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/itracker_cnn/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/itracker_cnn/" data-title="PyTorch Eye Blink Tracker Pt.2"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/itracker_cnn/" data-title="PyTorch Eye Blink Tracker Pt.2"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/itracker_cnn/" data-title="PyTorch Eye Blink Tracker Pt.2" data-image="images/eyeblink_project/minst.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -308,7 +311,8 @@ Used to reduce the spatial dimensions (height and width) of the feature maps. Th
         </section>
     </div>
 
-    <div class="post-nav"><a href="/itracker/" class="prev" rel="prev" title="PyTorch Eye Blink Tracker Pt.1"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>PyTorch Eye Blink Tracker Pt.1</a></div>
+    <div class="post-nav"><a href="/itracker/" class="prev" rel="prev" title="PyTorch Eye Blink Tracker Pt.1"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>PyTorch Eye Blink Tracker Pt.1</a>
+            <a href="/final_itracker/" class="next" rel="next" title="Final Eye Blink Tracker Implementation">Final Eye Blink Tracker Implementation<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
@@ -322,5 +326,5 @@ Used to reduce the spatial dimensions (height and width) of the feature maps. Th
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
