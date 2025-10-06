@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Posts - Etsub Feleke</title>
-        <link>http://localhost:1313/posts/</link>
+        <link>https://etsubwfeleke.github.io/posts/</link>
         <description>All Posts | Etsub Feleke</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Aug 2025 16:07:25 -0500</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Aug 2025 16:07:25 -0500</lastBuildDate><atom:link href="https://etsubwfeleke.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Final Eye Blink Tracker Implementation</title>
-    <link>http://localhost:1313/final_itracker/</link>
+    <link>https://etsubwfeleke.github.io/final_itracker/</link>
     <pubDate>Thu, 07 Aug 2025 16:07:25 -0500</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/final_itracker/</guid>
+    <guid>https://etsubwfeleke.github.io/final_itracker/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/i-tracker.png" referrerpolicy="no-referrer">
             </div><h2 id="eye-tracking-for-everyone-final-implementation-phase">Eye Tracking for Everyone: Final Implementation Phase</h2>
@@ -19,10 +19,10 @@
 </item>
 <item>
     <title>PyTorch Eye Blink Tracker Pt.2</title>
-    <link>http://localhost:1313/itracker_cnn/</link>
+    <link>https://etsubwfeleke.github.io/itracker_cnn/</link>
     <pubDate>Fri, 13 Jun 2025 16:26:52 -0500</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/itracker_cnn/</guid>
+    <guid>https://etsubwfeleke.github.io/itracker_cnn/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/eyeblink_project/minst.png" referrerpolicy="no-referrer">
             </div><h2 id="cnn-data-handling-and-minst-dataset">CNN, Data Handling and MINST dataset</h2>
@@ -33,10 +33,10 @@ CNNs are a type of neural network that are particularly well-suited for image da
 </item>
 <item>
     <title>PyTorch Eye Blink Tracker Pt.1</title>
-    <link>http://localhost:1313/itracker/</link>
+    <link>https://etsubwfeleke.github.io/itracker/</link>
     <pubDate>Thu, 05 Jun 2025 20:46:35 -0500</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/itracker/</guid>
+    <guid>https://etsubwfeleke.github.io/itracker/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/eyeblink_project/CNN.png" referrerpolicy="no-referrer">
             </div><h2 id="pytorch-fundamentals">PyTorch Fundamentals</h2>
@@ -48,20 +48,20 @@ hugo</p>]]></description>
 </item>
 <item>
     <title>Global CO₂ Emissions Predictions: A Machine Learning Approach</title>
-    <link>http://localhost:1313/co2_predictions/</link>
+    <link>https://etsubwfeleke.github.io/co2_predictions/</link>
     <pubDate>Sat, 05 Apr 2025 20:46:35 -0500</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/co2_predictions/</guid>
+    <guid>https://etsubwfeleke.github.io/co2_predictions/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/co2/co2.jpg" referrerpolicy="no-referrer">
             </div><p>As part of my data science journey, I took on a challenge that blends environmental urgency with machine learning: forecasting global CO₂ emissions. Using a Kaggle dataset spanning over 200 years and covering 190+ countries, I explored time-series forecasting techniques to understand historical patterns and predict future emissions. With models like Random Forest and ARIMA, I experimented, learned, and iterated—uncovering both the power and limitations of predictive modeling in the climate domain.</p>]]></description>
 </item>
 <item>
     <title>Predictive modeling</title>
-    <link>http://localhost:1313/predictive_modeling/</link>
+    <link>https://etsubwfeleke.github.io/predictive_modeling/</link>
     <pubDate>Fri, 14 Mar 2025 14:18:53 -0500</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/predictive_modeling/</guid>
+    <guid>https://etsubwfeleke.github.io/predictive_modeling/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/pred_mod/dataset-cover.png" referrerpolicy="no-referrer">
             </div><h2 id="learning-to-predict-housing-market-trends-with-machine-learning">Learning to Predict Housing Market Trends with Machine Learning</h2>
@@ -70,10 +70,10 @@ hugo</p>]]></description>
 </item>
 <item>
     <title>Affordable Education in Europe</title>
-    <link>http://localhost:1313/affordable-europe/</link>
+    <link>https://etsubwfeleke.github.io/affordable-europe/</link>
     <pubDate>Sun, 02 Mar 2025 20:46:35 -0500</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/affordable-europe/</guid>
+    <guid>https://etsubwfeleke.github.io/affordable-europe/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/europe-schools/featured-image.png" referrerpolicy="no-referrer">
             </div><h2 id="affordable-education-in-europe-vs-education-quality">Affordable Education in Europe vs. Education Quality:</h2>
@@ -94,10 +94,10 @@ hugo</p>]]></description>
 </item>
 <item>
     <title>Web scraping with Beautiful Soup</title>
-    <link>http://localhost:1313/web_scraping/</link>
+    <link>https://etsubwfeleke.github.io/web_scraping/</link>
     <pubDate>Thu, 14 Nov 2024 14:51:06 -0500</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/web_scraping/</guid>
+    <guid>https://etsubwfeleke.github.io/web_scraping/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/web_scraping/beautifulsoup.png" referrerpolicy="no-referrer">
             </div><h2 id="exploring-web-scraping-with-beautiful-soup-and-requests-a-learning-journey">Exploring Web Scraping with Beautiful Soup and Requests: A Learning Journey</h2>
@@ -107,10 +107,10 @@ hugo</p>]]></description>
 </item>
 <item>
     <title>Building Database Management System Using SQL</title>
-    <link>http://localhost:1313/dbms_sql/</link>
+    <link>https://etsubwfeleke.github.io/dbms_sql/</link>
     <pubDate>Wed, 14 Aug 2024 15:47:30 -0500</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/dbms_sql/</guid>
+    <guid>https://etsubwfeleke.github.io/dbms_sql/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/dbms/dbms_sql.png" referrerpolicy="no-referrer">
             </div><h2 id="building-a-hotel-management-database-system-a-learning-journey">Building a Hotel Management Database System: A Learning Journey</h2>
