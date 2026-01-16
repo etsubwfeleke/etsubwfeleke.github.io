@@ -3,7 +3,27 @@
         <title>All Posts - Etsub Feleke</title>
         <link>https://etsubwfeleke.github.io/posts/</link>
         <description>All Posts | Etsub Feleke</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Aug 2025 16:07:25 -0500</lastBuildDate><atom:link href="https://etsubwfeleke.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 08 Jan 2026 22:40:41 -0600</lastBuildDate><atom:link href="https://etsubwfeleke.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Cognitive Canvas : Exploring the Model Context Protocol (MCP).</title>
+    <link>https://etsubwfeleke.github.io/cognitive_canvas/</link>
+    <pubDate>Thu, 08 Jan 2026 22:40:41 -0600</pubDate>
+    <author>Author</author>
+    <guid>https://etsubwfeleke.github.io/cognitive_canvas/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/cognitive_canvas/image.png" referrerpolicy="no-referrer">
+            </div>Cognitive Canvas is an MCP (Model Context Protocol) Server that acts as a persistent memory layer for Claude Desktop and Copilot. It allows the AI to save URLs, categorize content, and generate quizzes for active recall.]]></description>
+</item>
+<item>
+    <title>Auto-Bench : Benchmarking Multi-Tool LLM Agents</title>
+    <link>https://etsubwfeleke.github.io/project_benchmark/</link>
+    <pubDate>Tue, 30 Dec 2025 17:17:55 -0600</pubDate>
+    <author>Author</author>
+    <guid>https://etsubwfeleke.github.io/project_benchmark/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/benchmarking_pipline/gemvsgpt.png" referrerpolicy="no-referrer">
+            </div>Auto Bench is a reproducible benchmarking framework that evaluates multi-tool LLM agents by measuring their process (tool selection, reasoning, action sequencing), not just outcomes.]]></description>
+</item>
+<item>
     <title>Final Eye Blink Tracker Implementation</title>
     <link>https://etsubwfeleke.github.io/final_itracker/</link>
     <pubDate>Thu, 07 Aug 2025 16:07:25 -0500</pubDate>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Auto-Bench : Benchmarking Multi-Tool LLM Agents - Etsub Feleke</title><meta name="Description" content="This is my KeepIt site"><meta property="og:url" content="http://localhost:1313/project_benchmark/">
+        <title>Auto-Bench : Benchmarking Multi-Tool LLM Agents - Etsub Feleke</title><meta name="Description" content="This is my KeepIt site"><meta property="og:url" content="https://etsubwfeleke.github.io/project_benchmark/">
   <meta property="og:site_name" content="Etsub Feleke">
   <meta property="og:title" content="Auto-Bench : Benchmarking Multi-Tool LLM Agents">
   <meta property="og:description" content="Auto Bench is a reproducible benchmarking framework that evaluates multi-tool LLM agents by measuring their process (tool selection, reasoning, action sequencing), not just outcomes.">
@@ -20,7 +20,7 @@
 <meta name="application-name" content="Etsub">
 <meta name="apple-mobile-web-app-title" content="Etsub"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#ffffff"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/project_benchmark/" /><link rel="prev" href="http://localhost:1313/final_itracker/" /><link rel="next" href="http://localhost:1313/cognitive_canvas/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://etsubwfeleke.github.io/project_benchmark/" /><link rel="prev" href="https://etsubwfeleke.github.io/final_itracker/" /><link rel="next" href="https://etsubwfeleke.github.io/cognitive_canvas/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -28,9 +28,9 @@
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/project_benchmark\/"
+            "@id": "https:\/\/etsubwfeleke.github.io\/project_benchmark\/"
         },"genre": "posts","wordcount":  1182 ,
-        "url": "http:\/\/localhost:1313\/project_benchmark\/","datePublished": "2025-12-30T17:17:55-06:00","dateModified": "2025-12-30T17:17:55-06:00","publisher": {
+        "url": "https:\/\/etsubwfeleke.github.io\/project_benchmark\/","datePublished": "2025-12-30T17:17:55-06:00","dateModified": "2025-12-30T17:17:55-06:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -198,38 +198,36 @@
 </span></span></code></pre></div><p>This guarantees <strong>reproducibility</strong>—every test run sees identical data.</p>
 <h3 id="3-three-agent-configurations">3. <strong>Three Agent Configurations</strong></h3>
 <p>I tested three levels of complexity:</p>
-<div class="table-container">
-  <table>
-    <thead>
+<table>
+  <thead>
       <tr>
-        <th style="text-align: right">Agent Type</th>
-        <th style="text-align: left">Tools Available</th>
-        <th style="text-align: center">Tests</th>
-        <th></th>
+          <th style="text-align: right">Agent Type</th>
+          <th style="text-align: left">Tools Available</th>
+          <th style="text-align: center">Tests</th>
+          <th></th>
       </tr>
-    </thead>
-    <tbody>
+  </thead>
+  <tbody>
       <tr>
-        <td style="text-align: right"><strong>No-Tool</strong></td>
-        <td style="text-align: left">None (pure reasoning)</td>
-        <td style="text-align: center">Can the model answer from memory?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td style="text-align: right"><strong>Single-Tool</strong></td>
-        <td style="text-align: left">Web search only</td>
-        <td style="text-align: center">Can it retrieve and synthesize?</td>
-        <td></td>
+          <td style="text-align: right"><strong>No-Tool</strong></td>
+          <td style="text-align: left">None (pure reasoning)</td>
+          <td style="text-align: center">Can the model answer from memory?</td>
+          <td></td>
       </tr>
       <tr>
-        <td style="text-align: right"><strong>Multi-Tool</strong></td>
-        <td style="text-align: left">Search + Summarizer + Quiz Gen</td>
-        <td style="text-align: center">Can it route tasks correctly?</td>
-        <td></td>
+          <td style="text-align: right"><strong>Single-Tool</strong></td>
+          <td style="text-align: left">Web search only</td>
+          <td style="text-align: center">Can it retrieve and synthesize?</td>
+          <td></td>
       </tr>
-    </tbody>
-  </table>
-</div>
+      <tr>
+          <td style="text-align: right"><strong>Multi-Tool</strong></td>
+          <td style="text-align: left">Search + Summarizer + Quiz Gen</td>
+          <td style="text-align: center">Can it route tasks correctly?</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
 <h2 id="the-react-prompting-strategy">The ReAct Prompting Strategy</h2>
 <p>I used the <strong>ReAct (Reason + Act)</strong> framework to make the agent&rsquo;s reasoning transparent:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">REACT_PROMPT</span> <span class="o">=</span> <span class="s2">&#34;&#34;&#34;
@@ -319,44 +317,42 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h2 id="key-results">Key Results</h2>
 <p>Testing <strong>Google Gemini 2.5 Flash</strong> vs <strong>OpenAI GPT-4o-mini</strong> across 40 scenarios:</p>
-<div class="table-container">
-  <table>
-    <thead>
+<table>
+  <thead>
       <tr>
-        <th style="text-align: right">Metric</th>
-        <th style="text-align: left">Gemini 2.5 Flash</th>
-        <th style="text-align: center">GPT-4o-mini</th>
+          <th style="text-align: right">Metric</th>
+          <th style="text-align: left">Gemini 2.5 Flash</th>
+          <th style="text-align: center">GPT-4o-mini</th>
       </tr>
-    </thead>
-    <tbody>
+  </thead>
+  <tbody>
       <tr>
-        <td style="text-align: right"><strong>Multi-Tool Success</strong></td>
-        <td style="text-align: left">80%</td>
-        <td style="text-align: center">45%</td>
-      </tr>
-      <tr>
-        <td style="text-align: right"><strong>Single-Tool Success</strong></td>
-        <td style="text-align: left">90%</td>
-        <td style="text-align: center">50%</td>
+          <td style="text-align: right"><strong>Multi-Tool Success</strong></td>
+          <td style="text-align: left">80%</td>
+          <td style="text-align: center">45%</td>
       </tr>
       <tr>
-        <td style="text-align: right"><strong>Cost per Success</strong></td>
-        <td style="text-align: left">$0.0276</td>
-        <td style="text-align: center">$0.0178</td>
+          <td style="text-align: right"><strong>Single-Tool Success</strong></td>
+          <td style="text-align: left">90%</td>
+          <td style="text-align: center">50%</td>
       </tr>
       <tr>
-        <td style="text-align: right"><strong>Average Latency</strong></td>
-        <td style="text-align: left">69.29s</td>
-        <td style="text-align: center">10.50s</td>
+          <td style="text-align: right"><strong>Cost per Success</strong></td>
+          <td style="text-align: left">$0.0276</td>
+          <td style="text-align: center">$0.0178</td>
       </tr>
       <tr>
-        <td style="text-align: right"><strong>Adversarial Refusal Rate</strong></td>
-        <td style="text-align: left">100%</td>
-        <td style="text-align: center">100%</td>
+          <td style="text-align: right"><strong>Average Latency</strong></td>
+          <td style="text-align: left">69.29s</td>
+          <td style="text-align: center">10.50s</td>
       </tr>
-    </tbody>
-  </table>
-</div>
+      <tr>
+          <td style="text-align: right"><strong>Adversarial Refusal Rate</strong></td>
+          <td style="text-align: left">100%</td>
+          <td style="text-align: center">100%</td>
+      </tr>
+  </tbody>
+</table>
 <p><strong>The Trade-Off:</strong> Gemini is nearly 2x more accurate but 6x slower and 55% more expensive. The &ldquo;best&rdquo; model depends on your priorities.</p>
 <h2 id="conclusions-and-learnings">Conclusions and Learnings</h2>
 <ol>
@@ -393,7 +389,7 @@
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/project_benchmark/" data-title="Auto-Bench : Benchmarking Multi-Tool LLM Agents"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/project_benchmark/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/project_benchmark/" data-title="Auto-Bench : Benchmarking Multi-Tool LLM Agents"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/project_benchmark/" data-title="Auto-Bench : Benchmarking Multi-Tool LLM Agents"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/project_benchmark/" data-title="Auto-Bench : Benchmarking Multi-Tool LLM Agents" data-image="images/benchmarking_pipline/gemvsgpt.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://etsubwfeleke.github.io/project_benchmark/" data-title="Auto-Bench : Benchmarking Multi-Tool LLM Agents"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://etsubwfeleke.github.io/project_benchmark/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://etsubwfeleke.github.io/project_benchmark/" data-title="Auto-Bench : Benchmarking Multi-Tool LLM Agents"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://etsubwfeleke.github.io/project_benchmark/" data-title="Auto-Bench : Benchmarking Multi-Tool LLM Agents"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://etsubwfeleke.github.io/project_benchmark/" data-title="Auto-Bench : Benchmarking Multi-Tool LLM Agents" data-image="images/benchmarking_pipline/gemvsgpt.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -420,5 +416,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
