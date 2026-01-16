@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.147.7">
+	<meta name="generator" content="Hugo 0.153.5">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -34,7 +34,7 @@
             <a href="/" title="Etsub Feleke">Etsub Feleke</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item active" href="/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/posts/"> Archives </a><a class="menu-item" href="/about/"> About Me </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item active" href="/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/posts/"> Archives </a><a class="menu-item" href="/about/"> About Me </a><a class="menu-item" href="https://drive.google.com/file/d/1Gzr1t43CpEgILE04zRZ-dp6TPC9fdcN8/view?usp=drive_link" rel="noopener noreffer" target="_blank"> Resume </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -77,7 +77,7 @@
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
-                </div><a class="menu-item" href="/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/posts/" title="">Archives</a><a class="menu-item" href="/about/" title="">About Me</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                </div><a class="menu-item" href="/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/posts/" title="">Archives</a><a class="menu-item" href="/about/" title="">About Me</a><a class="menu-item" href="https://drive.google.com/file/d/1Gzr1t43CpEgILE04zRZ-dp6TPC9fdcN8/view?usp=drive_link" title="" rel="noopener noreffer" target="_blank">Resume</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
@@ -98,7 +98,14 @@
 <a href="https://linkedin.com/in/etsub-wendwosen-feleke" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a>
 <a href="https://www.instagram.com/_etsubina_a_" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw" aria-hidden="true"></i></a>
 </div><h3 class="home-disclaimer">This is a blog about my learning journey, where I share my experiences, findings , my projects and everything I learn along the way. It is not a professional blog, but rather a personal one where I document my progress and share my thoughts with others. I hope you find it helpful and inspiring.</h3></div>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/final_itracker/">Final Eye Blink Tracker Implementation</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Author</a>
+</span>&nbsp;<span class="post-publish">published on <time datetime="2025-08-07">2025-08-07</time></span>&nbsp;<span class="post-category">included in <a href="/categories/machine-learning/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Machine Learning</a></span></div><div class="content"><h2 id="eye-tracking-for-everyone-final-implementation-phase">Eye Tracking for Everyone: Final Implementation Phase</h2>
+<p>In this final blog post of our iTracker series, I&rsquo;ll walk you through the complete implementation of our eye-tracking model using PyTorch. This post covers the full architecture, training process, and results of our gaze estimation system.</p>
+<h2 id="project-overview">Project Overview</h2>
+<p>The implementation provides a complete pipeline for eye gaze tracking, built on PyTorch and utilizing the GazeCapture dataset. The system can predict where a person is looking on a screen using just their face and eye images. You can find the complete implementation in my <a href="https://github.com/etsubwfeleke/I-Tracker" target="_blank" rel="noopener noreffer">GitHub repository</a>
+.</p></div><div class="featured-image-preview">
             <a href="/final_itracker/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -107,16 +114,16 @@
         data-sizes="auto"
         alt="/images/i-tracker.png"
         title="/images/i-tracker.png" width="621" height="416" /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="/final_itracker/">Final Eye Blink Tracker Implementation</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Author</a>
-</span>&nbsp;<span class="post-publish">published on <time datetime="2025-08-07">2025-08-07</time></span>&nbsp;<span class="post-category">included in <a href="/categories/machine-learning/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Machine Learning</a></span></div><div class="content"><h2 id="eye-tracking-for-everyone-final-implementation-phase">Eye Tracking for Everyone: Final Implementation Phase</h2>
-<p>In this final blog post of our iTracker series, I&rsquo;ll walk you through the complete implementation of our eye-tracking model using PyTorch. This post covers the full architecture, training process, and results of our gaze estimation system.</p>
-<h2 id="project-overview">Project Overview</h2>
-<p>The implementation provides a complete pipeline for eye gaze tracking, built on PyTorch and utilizing the GazeCapture dataset. The system can predict where a person is looking on a screen using just their face and eye images. You can find the complete implementation in my <a href="https://github.com/etsubwfeleke/I-Tracker" target="_blank" rel="noopener noreffer">GitHub repository</a>
-.</p></div><div class="post-footer">
+        </div><div class="post-footer">
         <a href="/final_itracker/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/itracker_cnn/">PyTorch Eye Blink Tracker Pt.2</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Author</a>
+</span>&nbsp;<span class="post-publish">published on <time datetime="2025-06-13">2025-06-13</time></span>&nbsp;<span class="post-category">included in <a href="/categories/machine-learning/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Machine Learning</a></span></div><div class="content"><h2 id="cnn-data-handling-and-minst-dataset">CNN, Data Handling and MINST dataset</h2>
+<p>In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.
+<a href="https://www.ibm.com/think/topics/convolutional-neural-networks" target="_blank" rel="noopener noreffer">### Convolutional Neural Networks (CNNs)</a>
+
+CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.</p></div><div class="featured-image-preview">
             <a href="/itracker_cnn/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -125,16 +132,17 @@
         data-sizes="auto"
         alt="/images/eyeblink_project/minst.png"
         title="/images/eyeblink_project/minst.png" width="989" height="273" /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="/itracker_cnn/">PyTorch Eye Blink Tracker Pt.2</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Author</a>
-</span>&nbsp;<span class="post-publish">published on <time datetime="2025-06-13">2025-06-13</time></span>&nbsp;<span class="post-category">included in <a href="/categories/machine-learning/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Machine Learning</a></span></div><div class="content"><h2 id="cnn-data-handling-and-minst-dataset">CNN, Data Handling and MINST dataset</h2>
-<p>In part one we learned basics of pytorch and built a simple linear model. In this part we will build a CNN model, learn how to handle data and use the MINST dataset.
-<a href="https://www.ibm.com/think/topics/convolutional-neural-networks" target="_blank" rel="noopener noreffer">### Convolutional Neural Networks (CNNs)</a>
-
-CNNs are a type of neural network that are particularly well-suited for image data. They use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This makes them very effective for tasks such as image classification, object detection, and more.</p></div><div class="post-footer">
+        </div><div class="post-footer">
         <a href="/itracker_cnn/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/itracker/">PyTorch Eye Blink Tracker Pt.1</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Author</a>
+</span>&nbsp;<span class="post-publish">published on <time datetime="2025-06-05">2025-06-05</time></span>&nbsp;<span class="post-category">included in <a href="/categories/machine-learning/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Machine Learning</a></span></div><div class="content"><h2 id="pytorch-fundamentals">PyTorch Fundamentals</h2>
+<p>Before delving into the depths of deep learning—pun intended—it&rsquo;s crucial to grasp the foundational aspects that pave the way. This will be a journal of sorts to document my learning experience as I figure out how to build an eye blink tracker using PyTorch from scratch.</p>
+<h2 id="what-is-pytorch">What is PyTorch?</h2>
+<p>PyTorch is a powerful open-source machine learning library that provides a flexible and efficient platform for building deep learning models. It is particularly well-suited for tasks involving computer vision, natural language processing, and reinforcement learning.
+PyTorch operates on tensors, akin to numpy arrays but optimized for GPU-accelerated computing. This efficiency boost—up to 100 times faster than CPUs—is due to GPUs&rsquo; inherent computational prowess.
+hugo</p></div><div class="featured-image-preview">
             <a href="/itracker/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -143,15 +151,7 @@ CNNs are a type of neural network that are particularly well-suited for image da
         data-sizes="auto"
         alt="/images/eyeblink_project/CNN.png"
         title="/images/eyeblink_project/CNN.png" width="840" height="331" /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="/itracker/">PyTorch Eye Blink Tracker Pt.1</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Author</a>
-</span>&nbsp;<span class="post-publish">published on <time datetime="2025-06-05">2025-06-05</time></span>&nbsp;<span class="post-category">included in <a href="/categories/machine-learning/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Machine Learning</a></span></div><div class="content"><h2 id="pytorch-fundamentals">PyTorch Fundamentals</h2>
-<p>Before delving into the depths of deep learning—pun intended—it&rsquo;s crucial to grasp the foundational aspects that pave the way. This will be a journal of sorts to document my learning experience as I figure out how to build an eye blink tracker using PyTorch from scratch.</p>
-<h2 id="what-is-pytorch">What is PyTorch?</h2>
-<p>PyTorch is a powerful open-source machine learning library that provides a flexible and efficient platform for building deep learning models. It is particularly well-suited for tasks involving computer vision, natural language processing, and reinforcement learning.
-PyTorch operates on tensors, akin to numpy arrays but optimized for GPU-accelerated computing. This efficiency boost—up to 100 times faster than CPUs—is due to GPUs&rsquo; inherent computational prowess.
-hugo</p></div><div class="post-footer">
+        </div><div class="post-footer">
         <a href="/itracker/">Read More</a></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
@@ -167,8 +167,8 @@ hugo</p></div><div class="post-footer">
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.147.7">Hugo</a> | Theme - <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="noopener noreffer" title="KeepIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> KeepIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.153.5">Hugo</a> | Theme - <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="noopener noreffer" title="KeepIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> KeepIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

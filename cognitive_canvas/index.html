@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Cognitive Canvas : Exploring the Model Context Protocol (MCP). - Etsub Feleke</title><meta name="Description" content="This is my KeepIt site"><meta property="og:url" content="http://localhost:1313/cognitive_canvas/">
+  <meta property="og:site_name" content="Etsub Feleke">
+  <meta property="og:title" content="Cognitive Canvas : Exploring the Model Context Protocol (MCP).">
+  <meta property="og:description" content="Cognitive Canvas is an MCP (Model Context Protocol) Server that acts as a persistent memory layer for Claude Desktop and Copilot. It allows the AI to save URLs, categorize content, and generate quizzes for active recall.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-08T22:40:41-06:00">
+    <meta property="article:modified_time" content="2026-01-08T22:40:41-06:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cognitive Canvas : Exploring the Model Context Protocol (MCP).">
+  <meta name="twitter:description" content="Cognitive Canvas is an MCP (Model Context Protocol) Server that acts as a persistent memory layer for Claude Desktop and Copilot. It allows the AI to save URLs, categorize content, and generate quizzes for active recall.">
+<meta name="application-name" content="Etsub">
+<meta name="apple-mobile-web-app-title" content="Etsub"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#ffffff"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/cognitive_canvas/" /><link rel="prev" href="http://localhost:1313/project_benchmark/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Cognitive Canvas : Exploring the Model Context Protocol (MCP).",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/cognitive_canvas\/"
+        },"genre": "posts","wordcount":  977 ,
+        "url": "http:\/\/localhost:1313\/cognitive_canvas\/","datePublished": "2026-01-08T22:40:41-06:00","dateModified": "2026-01-08T22:40:41-06:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Etsub Feleke">Etsub Feleke</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/posts/"> Archives </a><a class="menu-item" href="/about/"> About Me </a><a class="menu-item" href="https://drive.google.com/file/d/1Gzr1t43CpEgILE04zRZ-dp6TPC9fdcN8/view?usp=drive_link" rel="noopener noreffer" target="_blank"> Resume </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Etsub Feleke">Etsub Feleke</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/posts/" title="">Archives</a><a class="menu-item" href="/about/" title="">About Me</a><a class="menu-item" href="https://drive.google.com/file/d/1Gzr1t43CpEgILE04zRZ-dp6TPC9fdcN8/view?usp=drive_link" title="" rel="noopener noreffer" target="_blank">Resume</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Cognitive Canvas : Exploring the Model Context Protocol (MCP).</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Author</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>AI</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;977 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/cognitive_canvas/image.png"
+        data-srcset="/images/cognitive_canvas/image.png, /images/cognitive_canvas/image.png 1.5x, /images/cognitive_canvas/image.png 2x"
+        data-sizes="auto"
+        alt="/images/cognitive_canvas/image.png"
+        title="/images/cognitive_canvas/image.png" width="1200" height="630" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#building-cognitive-canvas-an-ai-powered-content-management-system-with-the-model-context-protocol">Building Cognitive Canvas: An AI-Powered Content Management System with the Model Context Protocol</a>
+      <ul>
+        <li><a href="#how">How?</a></li>
+      </ul>
+    </li>
+    <li><a href="#understanding-the-model-context-protocol-mcp">Understanding the Model Context Protocol (MCP)</a></li>
+    <li><a href="#high-level-architecture">High-Level Architecture</a>
+      <ul>
+        <li><a href="#how-it-works-example-workflow">How it works: Example Workflow</a></li>
+      </ul>
+    </li>
+    <li><a href="#technical-implementation">Technical Implementation</a>
+      <ul>
+        <li><a href="#1-mcp-server-layer">1. MCP Server Layer</a></li>
+        <li><a href="#2-content-extraction--categorization">2. Content Extraction &amp; Categorization</a></li>
+        <li><a href="#3-vector-database">3. Vector Database</a></li>
+        <li><a href="#4-quiz-generation-service">4. Quiz Generation Service</a></li>
+        <li><a href="#5-content-manager">5. Content Manager</a></li>
+      </ul>
+    </li>
+    <li><a href="#tech-stack-summary">Tech Stack Summary</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="building-cognitive-canvas-an-ai-powered-content-management-system-with-the-model-context-protocol">Building Cognitive Canvas: An AI-Powered Content Management System with the Model Context Protocol</h2>
+<p>When working on projects, we read a large amount of technical material documentation, blog posts, research papers, and code examples. We often ask an LLM to explain a concept or answer a specific question, get what we need in the moment, and then close the conversation. That knowledge is rarely saved, structured, or reused, even though it was part of our learning process.</p>
+<p>Cognitive Canvas addresses this gap by turning those one-off interactions into persistent, reusable knowledge. Instead of losing context when the chat window closes, the system allows an AI assistant to store, organize, and later retrieve what you’ve read making past learning available exactly when it’s needed.</p>
+<h3 id="how">How?</h3>
+<p><strong>Cognitive Canvas</strong> addresses this by integrating a &ldquo;second brain&rdquo; directly into the AI assistant. It is a custom MCP server that allows Claude to store, categorize, and semantically search a user&rsquo;s reading list.</p>
+<p>This project was built to gain hands-on experience with the <strong>Model Context Protocol (MCP)</strong>. As a new standard for connecting AI models to data, the development process focused on understanding implementation details specifically how to design robust tool definitions, handle type safety between the LLM and the backend, and manage state in a stateless protocol.</p>
+<h2 id="understanding-the-model-context-protocol-mcp">Understanding the Model Context Protocol (MCP)</h2>
+<p>To understand the architecture of Cognitive Canvas, it is essential to first understand the protocol it is built upon.</p>
+<p><strong>What is MCP?</strong>
+The Model Context Protocol (MCP) is an open standard that enables AI models to interact with external data and tools safely. Historically, connecting an LLM to a database or API required building a custom integration for that specific model. MCP eliminates this by providing a universal standard similar to how USB-C creates a standard connection for hardware devices.<br>
+<a href="https://modelcontextprotocol.io/docs/develop/build-server" target="_blank" rel="noopener noreffer">Learn more about building a MCP server here.</a>
+</p>
+<p><strong>How MCP Is Typically Used</strong><br>
+In a standard implementation, MCP operates on a client-host-server model:</p>
+<ul>
+<li><strong>The Host:</strong> The application the user interacts with (e.g., Claude Desktop, an IDE like Visual Studio Code).</li>
+<li><strong>The Server:</strong> An application that exposes data or tools (e.g., a Google Drive connector, a Slack bot).</li>
+<li><strong>The Client:</strong> The component within the host that communicates with the server.</li>
+</ul>
+<p>This allows developers to write a server once (e.g., &ldquo;Read my Calendar&rdquo;) and have it work with any AI application that supports the protocol.</p>
+<p><strong>How Cognitive Canvas Uses MCP</strong><br>
+In this specific project, Cognitive Canvas functions as an <strong>MCP Server</strong>. It does not run its own LLM for the chat interface; instead, it exposes &ldquo;Tools&rdquo; and &ldquo;Resources&rdquo; to the host (Claude or Copilot).</p>
+<ol>
+<li><strong>Tool Exposure:</strong> The server broadcasts a list of available tools <code>store_content</code>, <code>query_content</code>, and <code>generate_quiz</code> to the AI client.</li>
+<li><strong>Execution:</strong> When the user asks the AI to &ldquo;save this link,&rdquo; the AI client sends a request to the Cognitive Canvas server to execute the specific Python logic associated with that tool.</li>
+<li><strong>Context Injection:</strong> The server processes the request and returns the result (e.g., a success message or search results) back to the AI context window, allowing the conversation to continue seamlessly.</li>
+</ol>
+<h2 id="high-level-architecture">High-Level Architecture</h2>
+<p>The system follows a <strong>layered architecture</strong> to separate the protocol logic from the business logic. This ensures the core services remain testable and independent of the specific AI interface.<br>
+<figure><img src="/images/cognitive_canvas/cognitive_canvas.png"
+    alt="Cognitive Canvas Architecture">
+</figure>
+</p>
+<h3 id="how-it-works-example-workflow">How it works: Example Workflow</h3>
+<ol>
+<li><strong>User Action:</strong> The user asks Copilot in Visual Studio Code to &ldquo;Save this article about LLMs&rdquo; while browsing a webpage.</li>
+<li><strong>MCP Request:</strong> Copilot sends a request to the Cognitive Canvas MCP server to execute the <code>store_content</code> tool with the URL as a parameter.</li>
+<li><strong>Content Extraction:</strong> The server extracts the main content from the URL using BeautifulSoup4.</li>
+<li><strong>Categorization:</strong> The content is categorized using GPT-4o-mini via the Instructor library.</li>
+<li><strong>Storage:</strong> The content and metadata are stored in ChromaDB for semantic search and SQLite for relational data.</li>
+<li><strong>Confirmation:</strong> The server returns a success message to Copilot, which is displayed in the chat interface.</li>
+</ol>
+<h2 id="technical-implementation">Technical Implementation</h2>
+<p>The implementation consists of several key components, each responsible for a specific aspect of the system&rsquo;s functionality.</p>
+<h3 id="1-mcp-server-layer">1. MCP Server Layer</h3>
+<p><strong>FastMCP</strong> was utilized to bootstrap the server. The core responsibility of this layer is to define the API contract between the AI and the Python backend.</p>
+<p>To ensure reliability, <strong>Pydantic models</strong> are used for all tool parameters. This enforces strict typing; if the AI attempts to call a tool with malformed data, the request is rejected before it reaches the business logic.<br>
+<a href="https://github.com/etsubwfeleke/cognitive-canvas/blob/main/src/mcp_server.py" target="_blank" rel="noopener noreffer">click here to see the code.</a>
+</p>
+<h3 id="2-content-extraction--categorization">2. Content Extraction &amp; Categorization</h3>
+<p>This service handles data ingestion:</p>
+<ul>
+<li><strong>Extraction:</strong> Implemented using <strong>BeautifulSoup4</strong>. Custom parsing logic isolates the main article content from boilerplate HTML (navbars, footers), ensuring only high-quality data enters the database.<br>
+<a href="https://github.com/etsubwfeleke/cognitive-canvas/blob/main/src/services/content_extractor.py" target="_blank" rel="noopener noreffer">click here to see the code.</a>
+</li>
+<li><strong>Categorization:</strong> <strong>OpenAI&rsquo;s GPT-4o-mini</strong> is integrated using the <strong>Instructor</strong> library. Instructor is critical here because it patches the OpenAI client to validate responses against Pydantic schemas, guaranteeing that the category and tags returned are always valid JSON.<br>
+<a href="https://github.com/etsubwfeleke/cognitive-canvas/blob/main/src/services/categorization_service.py" target="_blank" rel="noopener noreffer">click here to see the code.</a>
+</li>
+</ul>
+<h3 id="3-vector-database">3. Vector Database</h3>
+<p>ChromaDB is used to store and retrieve content based on semantic similarity. The <strong>Sentence-Transformers</strong> library generates embeddings for each article, enabling efficient vector searches.
+<strong>vector_database.py</strong> encapsulates all database interactions, providing a clean interface for adding new content and querying existing entries.<br>
+<a href="https://github.com/etsubwfeleke/cognitive-canvas/blob/main/src/services/vector_database.py" target="_blank" rel="noopener noreffer">click here to see the code.</a>
+</p>
+<h3 id="4-quiz-generation-service">4. Quiz Generation Service</h3>
+<p>To facilitate active learning, this service uses <strong>GPT-3.5-turbo</strong> to generate study materials. It takes the stored content and transforms it into structured quizzes (Multiple Choice, True/False). This demonstrates how to chain retrieval (RAG) with generative tasks.<br>
+<a href="https://github.com/etsubwfeleke/cognitive-canvas/blob/main/src/services/quiz_service.py" target="_blank" rel="noopener noreffer">click here to see the code.</a>
+</p>
+<h3 id="5-content-manager">5. Content Manager</h3>
+<p>The Content Manager orchestrates the overall workflow. It acts as a facade, coordinating between the extraction, categorization, vector database, and quiz services to fulfill user requests.<br>
+<a href="https://github.com/etsubwfeleke/cognitive-canvas/blob/main/src/services/content_manager.py" target="_blank" rel="noopener noreffer">click here to see the code.</a>
+</p>
+<h2 id="tech-stack-summary">Tech Stack Summary</h2>
+<ul>
+<li><strong>Core:</strong> Python 3.11, FastMCP, Pydantic</li>
+<li><strong>AI/ML:</strong> OpenAI API, Instructor, Sentence-Transformers</li>
+<li><strong>Database:</strong> ChromaDB (Vector), SQLite (Relational)</li>
+<li><strong>Testing:</strong> Pytest, Tenacity (for retry logic)</li>
+<li><strong>Web Scraping:</strong> BeautifulSoup4, Requests</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-01-08</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/cognitive_canvas/" data-title="Cognitive Canvas : Exploring the Model Context Protocol (MCP)."><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/cognitive_canvas/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/cognitive_canvas/" data-title="Cognitive Canvas : Exploring the Model Context Protocol (MCP)."><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/cognitive_canvas/" data-title="Cognitive Canvas : Exploring the Model Context Protocol (MCP)."><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/cognitive_canvas/" data-title="Cognitive Canvas : Exploring the Model Context Protocol (MCP)." data-image="images/cognitive_canvas/image.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/project_benchmark/" class="prev" rel="prev" title="Auto-Bench : Benchmarking Multi-Tool LLM Agents"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Auto-Bench : Benchmarking Multi-Tool LLM Agents</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.153.5">Hugo</a> | Theme - <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="noopener noreffer" title="KeepIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> KeepIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
