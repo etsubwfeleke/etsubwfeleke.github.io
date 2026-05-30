@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>RedInk: A Multi-Agent Grading Assistant - Etsub Feleke</title><meta name="Description" content="This is my KeepIt site"><meta property="og:url" content="http://localhost:1313/redink/">
+  <meta property="og:site_name" content="Etsub Feleke">
+  <meta property="og:title" content="RedInk: A Multi-Agent Grading Assistant">
+  <meta property="og:description" content="RedInk is a multi-agent grading system I built using LangGraph. It uses specialized AI agents to parse rubrics, set standards, evaluate submissions, and generate feedback, with a mandatory human review step before anything is finalized.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-05-21T23:41:53-05:00">
+    <meta property="article:modified_time" content="2026-05-21T23:41:53-05:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="RedInk: A Multi-Agent Grading Assistant">
+  <meta name="twitter:description" content="RedInk is a multi-agent grading system I built using LangGraph. It uses specialized AI agents to parse rubrics, set standards, evaluate submissions, and generate feedback, with a mandatory human review step before anything is finalized.">
+<meta name="application-name" content="Etsub">
+<meta name="apple-mobile-web-app-title" content="Etsub"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#ffffff"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/redink/" /><link rel="prev" href="http://localhost:1313/dejavu/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "RedInk: A Multi-Agent Grading Assistant",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/redink\/"
+        },"genre": "posts","wordcount":  793 ,
+        "url": "http:\/\/localhost:1313\/redink\/","datePublished": "2026-05-21T23:41:53-05:00","dateModified": "2026-05-21T23:41:53-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Etsub Feleke"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Etsub Feleke">Etsub Feleke</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/posts/"> Archives </a><a class="menu-item" href="/about/"> About Me </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Etsub Feleke">Etsub Feleke</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/posts/" title="">Archives</a><a class="menu-item" href="/about/" title="">About Me</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">RedInk: A Multi-Agent Grading Assistant</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Etsub Feleke</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>AI</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-05-21">2026-05-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;793 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/redink.jpg"
+        data-srcset="/images/redink.jpg, /images/redink.jpg 1.5x, /images/redink.jpg 2x"
+        data-sizes="auto"
+        alt="/images/redink.jpg"
+        title="/images/redink.jpg" width="1672" height="307" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#where-this-came-from">Where This Came From</a></li>
+    <li><a href="#first-attempt-one-big-prompt">First Attempt: One Big Prompt</a></li>
+    <li><a href="#breaking-it-into-agents">Breaking It Into Agents</a></li>
+    <li><a href="#the-human-review-step">The Human Review Step</a>
+      <ul>
+        <li><a href="#demo-in-action">Demo in Action</a></li>
+      </ul>
+    </li>
+    <li><a href="#some-technical-choices">Some Technical Choices</a></li>
+    <li><a href="#unexpected-challenges">Unexpected Challenges</a></li>
+    <li><a href="#the-stack">The Stack</a></li>
+    <li><a href="#whats-next">What&rsquo;s Next</a></li>
+    <li><a href="#see-it-in-action">See It in Action</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="where-this-came-from">Where This Came From</h2>
+<p>Having been a teaching assistant, I know firsthand how messy grading can get. You have a rubric that makes sense when you read it, but starts feeling ambiguous once you&rsquo;re actually scoring the 15th submission. And by the time you hit the 30th, your standards have probably drifted from where they started.</p>
+<p>I kept wondering: could AI handle the tedious parts (parsing rubrics, comparing against examples, drafting initial feedback) while keeping a human in charge of the actual scoring decisions? That question turned into <strong>RedInk</strong>.</p>
+<p><strong><a href="https://redink-frontend-25mj4tmsxa-uc.a.run.app/" target="_blank" rel="noopener noreffer">You can try the live demo here</a>
+</strong></p>
+<h2 id="first-attempt-one-big-prompt">First Attempt: One Big Prompt</h2>
+<p>My first try was simple: give one LLM the rubric and the submission, ask it to grade everything at once. The results were&hellip; not great. It would skip criteria, lose track of point values, or write feedback that didn&rsquo;t match the scores it gave. It became clear pretty quickly that this needed to be broken into smaller, focused steps.</p>
+<h2 id="breaking-it-into-agents">Breaking It Into Agents</h2>
+<p>I split the grading workflow into four agents, each with one job, orchestrated by <strong>LangGraph</strong> to manage the shared state between them:</p>
+<pre tabindex="0"><code>Rubric Analyzer --&gt; Standard Setter --&gt; Grading Agent --&gt; [Human Review] --&gt; Feedback Synthesizer
+</code></pre><p><strong>Rubric Analyzer</strong> takes the uploaded rubric (PDF, DOCX, Markdown, or plain text) and extracts structured criteria with point values. This was harder than I expected because rubrics come in so many formats: tables, bullet lists, freeform paragraphs, percentage ranges, letter grades. Using an LLM for this parsing step handled that diversity way better than any regex approach would have.</p>
+<p><strong>Standard Setter</strong> is optional. If the instructor provides a &ldquo;golden&rdquo; example (a reference assignment), this agent analyzes it and figures out what excellence looks like for each criterion. I wasn&rsquo;t sure how much this would matter, but it turned out to make a noticeable difference. Without it, the grading agent tends to be more lenient since it&rsquo;s interpreting rubric language in the abstract.</p>
+<p><strong>Grading Agent</strong> does the evaluation. It takes the student submission, the structured rubric, and the standards, then proposes scores with reasoning and evidence for each criterion.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GradingResult</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">criterion</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">    <span class="n">score</span><span class="p">:</span> <span class="nb">float</span>
+</span></span><span class="line"><span class="cl">    <span class="n">max_score</span><span class="p">:</span> <span class="nb">float</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reasoning</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evidence</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</span></span></code></pre></div><p><strong>Feedback Synthesizer</strong> runs after human review and generates constructive feedback: strengths, areas for improvement, and next steps.</p>
+<h2 id="the-human-review-step">The Human Review Step</h2>
+<p>This is the part I feel most strongly about. <strong>No grade gets finalized without a TA looking at it.</strong> The workflow pauses, shows the AI&rsquo;s proposed scores alongside its reasoning and evidence, and waits for the TA to approve or adjust.</p>
+<p>I&rsquo;ve seen too many AI tools that try to fully automate things that really need a human in the loop. The philosophy here is simple: AI proposes, humans decide.</p>
+<h3 id="demo-in-action">Demo in Action</h3>
+<p>Here&rsquo;s a quick look at the grading workflow in practice (sped up 2x):</p>
+<video width="100%" height="auto" controls style="max-width: 600px; margin: 20px auto; display: block; border-radius: 8px;">
+  <source src="/videos/redink-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<h2 id="some-technical-choices">Some Technical Choices</h2>
+<p><strong>Temperature = 0</strong> for all LLM calls. Grading should be deterministic. Run the same submission twice, get the same proposed scores.</p>
+<p><strong>Pydantic validation on every agent output.</strong> If the LLM returns malformed data, the system catches it before it moves downstream. This saved me from a lot of subtle bugs during development.</p>
+<p><strong>Score boundary enforcement.</strong> If a criterion is worth 10 points, the agent can&rsquo;t propose 11. LLMs will absolutely hallucinate out-of-range scores if you don&rsquo;t enforce this.</p>
+<p><strong>No persistent storage of student data.</strong> Everything processes in memory, scoped to the session, cleaned up after.</p>
+<p>The system supports <strong>OpenAI GPT</strong> and in the future will support <strong>Anthropic Claude</strong>, selectable at runtime. Users bring their own API key.</p>
+<h2 id="unexpected-challenges">Unexpected Challenges</h2>
+<p>Rubric format diversity was the biggest headache. Point values in parentheses, percentage ranges, descriptive levels (Excellent/Good/Fair/Poor) without numbers. The Rubric Analyzer needed a lot of prompt iteration to handle all of that.</p>
+<p>Getting agents to work together through shared state, handling failures gracefully (what if no golden example is provided?), and making the async checkpoint pause work correctly across API calls&hellip; that took significant effort. LangGraph was the right tool for this, but the learning curve was real.</p>
+<p>The human review UI also went through several iterations. Too little information and TAs just rubber-stamp. Too much and they&rsquo;re overwhelmed. I landed on showing the score, a short reasoning summary, and expandable evidence sections.</p>
+<h2 id="the-stack">The Stack</h2>
+<ul>
+<li><strong>Backend:</strong> Python, FastAPI, LangGraph, LangChain, Pydantic</li>
+<li><strong>Frontend:</strong> React 18, Tailwind CSS, Vite, Axios</li>
+<li><strong>Document Parsing:</strong> PyPDF2, python-docx</li>
+<li><strong>Infrastructure:</strong> Google Cloud Run, Cloud Build, Docker</li>
+</ul>
+<h2 id="whats-next">What&rsquo;s Next</h2>
+<ul>
+<li>Proper tests (the honest gap in this project right now)</li>
+<li>Batch grading for a whole class</li>
+<li>Metrics on how often TAs agree with vs. override the AI</li>
+<li>Fine-tuned models for specific rubric types (coding vs. writing vs. data viz)</li>
+</ul>
+<h2 id="see-it-in-action">See It in Action</h2>
+<ul>
+<li><a href="https://github.com/etsubwfeleke/RedInk" target="_blank" rel="noopener noreffer">GitHub Repository</a>
+</li>
+<li><a href="https://redink-frontend-25mj4tmsxa-uc.a.run.app/" target="_blank" rel="noopener noreffer">Live Demo</a>
+</li>
+<li><a href="https://github.com/etsubwfeleke/RedInk/blob/main/TECHNICAL_REPORT.md" target="_blank" rel="noopener noreffer">Technical Report Write-Up: RedInk: A Multi-Agent Grading Assistant</a>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-05-21</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/redink/" data-title="RedInk: A Multi-Agent Grading Assistant"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/redink/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/redink/" data-title="RedInk: A Multi-Agent Grading Assistant"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/redink/" data-title="RedInk: A Multi-Agent Grading Assistant"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/redink/" data-title="RedInk: A Multi-Agent Grading Assistant" data-image="/images/redink.jpg"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/dejavu/" class="prev" rel="prev" title="Deja Vu: Near-Duplicate Video Detection with Deep Learning"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Deja Vu: Near-Duplicate Video Detection with Deep Learning</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.153.5">Hugo</a> | Theme - <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="noopener noreffer" title="KeepIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> KeepIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Etsub Feleke</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

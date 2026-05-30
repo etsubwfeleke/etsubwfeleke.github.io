@@ -1,8 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on Etsub Feleke</title><link>https://etsubwfeleke.github.io/categories/ai/</link><description>Recent content in AI on Etsub Feleke</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 08 Dec 2025 22:40:41 -0600</lastBuildDate><atom:link href="https://etsubwfeleke.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>Cognitive Canvas : Exploring the Model Context Protocol (MCP).</title><link>https://etsubwfeleke.github.io/cognitive_canvas/</link><pubDate>Mon, 08 Dec 2025 22:40:41 -0600</pubDate><guid>https://etsubwfeleke.github.io/cognitive_canvas/</guid><description>Cognitive Canvas is an MCP (Model Context Protocol) Server that acts as a persistent memory layer for Claude Desktop and Copilot. It allows the AI to save URLs, categorize content, and generate quizzes for active recall.</description></item><item><title>Auto-Bench : Benchmarking Multi-Tool LLM Agents</title><link>https://etsubwfeleke.github.io/project_benchmark/</link><pubDate>Sun, 30 Nov 2025 17:17:55 -0600</pubDate><guid>https://etsubwfeleke.github.io/project_benchmark/</guid><description>&lt;!-- Auto Bench is a reproducible benchmarking framework that evaluates multi-tool LLM agents by measuring their process (tool selection, reasoning, action sequencing), not just outcomes.
-
-Key Points:
-- Compares Gemini 2.5 Flash vs GPT-4o-mini across three agent configurations (no-tool, single-tool, multi-tool)
-- Uses a sandboxed environment with static local documents for reproducibility
-- Tests 40 public health scenarios with automated evaluation
-- Results: Gemini 2.5 Flash achieved 80% success on multi-tool tasks vs GPT-4o-mini's 45%, though GPT-4o-mini is cheaper
-- Finding: Many failures were architectural (missing context) rather than model limitations, highlighting that system design matters as much as model selection --&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on Etsub Feleke</title>
+    <link>http://localhost:1313/categories/ai/</link>
+    <description>Recent content in AI on Etsub Feleke</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 21 May 2026 23:41:53 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RedInk: A Multi-Agent Grading Assistant</title>
+      <link>http://localhost:1313/redink/</link>
+      <pubDate>Thu, 21 May 2026 23:41:53 -0500</pubDate>
+      <guid>http://localhost:1313/redink/</guid>
+      <description>RedInk is a multi-agent grading system I built using LangGraph. It uses specialized AI agents to parse rubrics, set standards, evaluate submissions, and generate feedback, with a mandatory human review step before anything is finalized.</description>
+    </item>
+    <item>
+      <title>Agentic Evolution: From Patent Data to Career Intelligence</title>
+      <link>http://localhost:1313/agentic_evolution/</link>
+      <pubDate>Sat, 21 Mar 2026 23:31:52 -0500</pubDate>
+      <guid>http://localhost:1313/agentic_evolution/</guid>
+      <description>For our DTSC 5082 group project, we built a system that uses USPTO patent data, financial indicators, and job-market signals to generate AI career intelligence reports. This post walks through what we learned along the way.</description>
+    </item>
+    <item>
+      <title>Cognitive Canvas : Exploring the Model Context Protocol (MCP).</title>
+      <link>http://localhost:1313/cognitive_canvas/</link>
+      <pubDate>Mon, 08 Dec 2025 22:40:41 -0600</pubDate>
+      <guid>http://localhost:1313/cognitive_canvas/</guid>
+      <description>Cognitive Canvas is an MCP (Model Context Protocol) Server that acts as a persistent memory layer for Claude Desktop and Copilot. It allows the AI to save URLs, categorize content, and generate quizzes for active recall.</description>
+    </item>
+    <item>
+      <title>Auto-Bench : Benchmarking Multi-Tool LLM Agents</title>
+      <link>http://localhost:1313/project_benchmark/</link>
+      <pubDate>Sun, 30 Nov 2025 17:17:55 -0600</pubDate>
+      <guid>http://localhost:1313/project_benchmark/</guid>
+      <description>&lt;!-- Auto Bench is a reproducible benchmarking framework that evaluates multi-tool LLM agents by measuring their process (tool selection, reasoning, action sequencing), not just outcomes.&#xA;&#xA;Key Points:&#xA;- Compares Gemini 2.5 Flash vs GPT-4o-mini across three agent configurations (no-tool, single-tool, multi-tool)&#xA;- Uses a sandboxed environment with static local documents for reproducibility&#xA;- Tests 40 public health scenarios with automated evaluation&#xA;- Results: Gemini 2.5 Flash achieved 80% success on multi-tool tasks vs GPT-4o-mini&#39;s 45%, though GPT-4o-mini is cheaper&#xA;- Finding: Many failures were architectural (missing context) rather than model limitations, highlighting that system design matters as much as model selection --&gt;</description>
+    </item>
+  </channel>
+</rss>

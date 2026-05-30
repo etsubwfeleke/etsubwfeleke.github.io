@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Deja Vu: Near-Duplicate Video Detection with Deep Learning - Etsub Feleke</title><meta name="Description" content="This is my KeepIt site"><meta property="og:url" content="http://localhost:1313/dejavu/">
+  <meta property="og:site_name" content="Etsub Feleke">
+  <meta property="og:title" content="Deja Vu: Near-Duplicate Video Detection with Deep Learning">
+  <meta property="og:description" content="For my Deep Learning course, I built a near-duplicate video detection system using CLIP and ResNet-50. This post documents the process of figuring out how to catch re-uploaded banned videos, even after edits like cropping, overlays, and reaction layouts.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-05-21T23:39:14-05:00">
+    <meta property="article:modified_time" content="2026-05-21T23:39:14-05:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Deja Vu: Near-Duplicate Video Detection with Deep Learning">
+  <meta name="twitter:description" content="For my Deep Learning course, I built a near-duplicate video detection system using CLIP and ResNet-50. This post documents the process of figuring out how to catch re-uploaded banned videos, even after edits like cropping, overlays, and reaction layouts.">
+<meta name="application-name" content="Etsub">
+<meta name="apple-mobile-web-app-title" content="Etsub"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#ffffff"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/dejavu/" /><link rel="prev" href="http://localhost:1313/agentic_evolution/" /><link rel="next" href="http://localhost:1313/redink/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Deja Vu: Near-Duplicate Video Detection with Deep Learning",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/dejavu\/"
+        },"genre": "posts","wordcount":  933 ,
+        "url": "http:\/\/localhost:1313\/dejavu\/","datePublished": "2026-05-21T23:39:14-05:00","dateModified": "2026-05-21T23:39:14-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Etsub Feleke"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Etsub Feleke">Etsub Feleke</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/posts/"> Archives </a><a class="menu-item" href="/about/"> About Me </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Etsub Feleke">Etsub Feleke</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/posts/" title="">Archives</a><a class="menu-item" href="/about/" title="">About Me</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Deja Vu: Near-Duplicate Video Detection with Deep Learning</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Etsub Feleke</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/deep-learning/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Deep Learning</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-05-21">2026-05-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;933 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/djavu.jpg"
+        data-srcset="/images/djavu.jpg, /images/djavu.jpg 1.5x, /images/djavu.jpg 2x"
+        data-sizes="auto"
+        alt="/images/djavu.jpg"
+        title="/images/djavu.jpg" width="1671" height="320" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-question-that-started-this">The Question That Started This</a></li>
+    <li><a href="#how-do-you-even-compare-videos">How Do You Even Compare Videos?</a></li>
+    <li><a href="#making-my-own-dataset">Making My Own Dataset</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#the-live-demo">The Live Demo</a>
+      <ul>
+        <li><a href="#demo-video">Demo Video</a></li>
+      </ul>
+    </li>
+    <li><a href="#what-i-took-away">What I Took Away</a></li>
+    <li><a href="#what-id-explore-next">What I&rsquo;d Explore Next</a></li>
+    <li><a href="#tech-stack">Tech Stack</a></li>
+    <li><a href="#see-it-in-action">See It in Action</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="the-question-that-started-this">The Question That Started This</h2>
+<p>Something that always bugged me about content moderation: what happens when someone takes a banned video, crops it, shifts the colors, maybe sticks it in a reaction layout, and re-uploads it? The platform has technically seen this content before, but now it looks just different enough to slip through.</p>
+<p>I wanted to explore that for my <strong>CSCE 5218 (Deep Learning)</strong> course at UNT. I had never worked with video data before, so this felt like a good excuse to figure out transfer learning on something that isn&rsquo;t just image classification. The name &ldquo;Deja Vu&rdquo; came from the core idea: the system has seen this before, even if it looks a little different now.</p>
+<h2 id="how-do-you-even-compare-videos">How Do You Even Compare Videos?</h2>
+<p>This was my first real question. I didn&rsquo;t know how to approach video similarity programmatically. My initial thought was to break it down frame by frame. A video is just a sequence of images, right? So if I could get a meaningful representation of each frame, maybe I could aggregate those into a single &ldquo;fingerprint&rdquo; for the whole video.</p>
+<p>That led me to <strong>transfer learning</strong>. Training something from scratch wasn&rsquo;t realistic with the data I had, but pretrained models like <strong>CLIP (ViT-B/32)</strong> and <strong>ResNet-50</strong> already understand visual content at a deep level. The idea: extract embeddings from sampled frames, average them into one video-level vector, and then use cosine similarity to compare against a database of known banned content.</p>
+<p>Here&rsquo;s the pipeline I ended up with:</p>
+<ol>
+<li>Sample frames at 1 fps</li>
+<li>Extract embeddings with CLIP or ResNet</li>
+<li>Mean-pool and L2-normalize into a single video embedding</li>
+<li>Compare against the banned database using cosine similarity</li>
+<li>Map the similarity score to a decision: Auto-flag (&gt;= 0.90), Human Review (0.70-0.89), or Allow (&lt; 0.70)</li>
+</ol>
+<h2 id="making-my-own-dataset">Making My Own Dataset</h2>
+<p>There&rsquo;s no &ldquo;banned videos and their re-uploads&rdquo; dataset on Kaggle, so I had to make my own. This ended up taking more time than I expected.</p>
+<p>I started with 52 source videos from Pexels and Pixabay (Creative Commons), then wrote scripts to generate two tiers of transformations:</p>
+<p><strong>Easy (8 types, 416 videos):</strong> Flips, brightness changes, cropping, speed adjustments. The kind of quick edits someone might make in 30 seconds.</p>
+<p><strong>Hard (6 types, 312 videos):</strong> Reaction layouts (video shrunk into a corner of a bigger frame), heavy text overlays, aggressive combined transforms. These are what actually break simple detection.</p>
+<p>I also generated <strong>104 negative videos</strong> (totally unrelated content) to test for false positives.</p>
+<p>Splitting into easy vs. hard turned out to be one of the most important decisions, because it completely changed the results story. More on that in a second.</p>
+<details>
+<summary><strong>Transformation Examples (Click to Expand)</strong></summary>
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 20px 0; background-color: #f9f9f9;">
+<iframe src="/djavu-transformation-slides.html" style="width: 100%; height: 600px; border: none; border-radius: 4px;"></iframe>
+</div>
+</details>
+<h2 id="results">Results</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Easy mAP</th>
+          <th>Hard mAP</th>
+          <th>Best F1</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CLIP</td>
+          <td>0.972</td>
+          <td>0.828</td>
+          <td>0.877</td>
+      </tr>
+      <tr>
+          <td>ResNet-50</td>
+          <td>0.979</td>
+          <td>0.905</td>
+          <td>0.901</td>
+      </tr>
+      <tr>
+          <td>pHash baseline</td>
+          <td>-</td>
+          <td>-</td>
+          <td>easy: 0.889, hard: 0.857</td>
+      </tr>
+  </tbody>
+</table>
+<p>A few things surprised me here.</p>
+<p>ResNet-50 outperformed CLIP overall. I honestly expected CLIP to win because of its more sophisticated vision-language training, but ResNet&rsquo;s pure visual features were better at discriminating in most cases.</p>
+<p>CLIP did better on reaction layouts and heavy combined edits though. I think its training gives it a more semantic sense of &ldquo;what&rsquo;s in this frame&rdquo; that holds up when the visual structure gets rearranged. That was interesting to see.</p>
+<p>pHash worked surprisingly well on easy edits. If I had only tested easy transformations, I might have concluded deep learning was overkill for this problem. The hard set is what showed the real difference. This is why splitting into two tiers mattered so much.</p>
+<h2 id="the-live-demo">The Live Demo</h2>
+<p>I wanted this to feel tangible, not just metrics in a notebook. So I built a demo with <strong>FastAPI</strong> on the backend and <strong>React + Vite</strong> on the frontend. You upload an MP4, the system samples frames, extracts CLIP embeddings, compares against the banned database, and returns a similarity score with a moderation decision.</p>
+<p>Getting the frontend and backend talking smoothly involved the usual headaches (CORS, file upload handling, async processing), but having an actual interface where you drag and drop a video and see &ldquo;Auto-flag: 0.94 similarity&rdquo; made the whole project click in a way that charts and tables don&rsquo;t.</p>
+<h3 id="demo-video">Demo Video</h3>
+<video width="100%" height="auto" controls style="max-width: 600px; margin: 20px auto; display: block; border-radius: 8px;">
+  <source src="/videos/djavu-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<h2 id="what-i-took-away">What I Took Away</h2>
+<p>Transfer learning goes further than I expected. I didn&rsquo;t fine-tune anything. Pretrained CLIP and ResNet, straight out of the box, hit over 90% F1 on hard near-duplicate detection. The representations these models learn are incredibly general.</p>
+<p>How you build your test set shapes the story you tell. If I&rsquo;d skipped the hard transformations, I would have drawn totally different (and misleading) conclusions about what methods work. I&rsquo;ll probably think about this every time I set up an evaluation from now on.</p>
+<p>I also learned that a single threshold doesn&rsquo;t really cut it for this kind of task. I tried binary duplicate/not-duplicate at first and it didn&rsquo;t work well. The tiered approach (auto-flag / review / allow) was much more practical. And more frames doesn&rsquo;t always mean better, since accuracy plateaus pretty early when you increase the sampling rate.</p>
+<h2 id="what-id-explore-next">What I&rsquo;d Explore Next</h2>
+<ul>
+<li>Fine-tuning the encoders on actual near-duplicate pairs</li>
+<li>Adding audio fingerprinting (the system is purely visual right now)</li>
+<li>Temporal modeling, since mean-pooling throws away all frame ordering</li>
+</ul>
+<h2 id="tech-stack">Tech Stack</h2>
+<ul>
+<li><strong>Deep Learning:</strong> PyTorch, CLIP (ViT-B/32), ResNet-50, torchvision</li>
+<li><strong>Similarity Search:</strong> FAISS, cosine similarity</li>
+<li><strong>Evaluation:</strong> scikit-learn (mAP, precision, recall, F1)</li>
+<li><strong>Demo:</strong> FastAPI (backend), React + Vite (frontend)</li>
+<li><strong>Data Processing:</strong> OpenCV, NumPy, imagehash</li>
+<li><strong>Visualization:</strong> Matplotlib, Seaborn</li>
+</ul>
+<h2 id="see-it-in-action">See It in Action</h2>
+<ul>
+<li><a href="https://github.com/etsubwfeleke/deja-vu" target="_blank" rel="noopener noreffer">GitHub Repository</a>
+</li>
+<li><a href="https://drive.google.com/file/d/1c7HJEKLpcwMQDYU4NpxWlyYdKE4DS2Wa/view?usp=drive_link" target="_blank" rel="noopener noreffer">Technical Report Write-Up: Deja Vu: Near-Duplicate Video Detection with Deep Learning</a>
+</li>
+</ul>
+<p><strong>Course project for CSCE 5218 (Deep Learning) at UNT</strong></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-05-21</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/dejavu/" data-title="Deja Vu: Near-Duplicate Video Detection with Deep Learning"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/dejavu/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/dejavu/" data-title="Deja Vu: Near-Duplicate Video Detection with Deep Learning"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/dejavu/" data-title="Deja Vu: Near-Duplicate Video Detection with Deep Learning"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/dejavu/" data-title="Deja Vu: Near-Duplicate Video Detection with Deep Learning" data-image="/images/djavu.jpg"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/agentic_evolution/" class="prev" rel="prev" title="Agentic Evolution: From Patent Data to Career Intelligence"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Agentic Evolution: From Patent Data to Career Intelligence</a>
+            <a href="/redink/" class="next" rel="next" title="RedInk: A Multi-Agent Grading Assistant">RedInk: A Multi-Agent Grading Assistant<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.153.5">Hugo</a> | Theme - <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="noopener noreffer" title="KeepIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> KeepIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Etsub Feleke</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
