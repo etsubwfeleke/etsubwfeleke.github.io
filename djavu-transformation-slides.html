@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dataset Transformation Slides</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css">
+
+  <style>
+    :root {
+      --r-background-color: #ffffff;
+      --r-main-font: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      --r-heading-font: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      --r-main-color: #1a1a1a;
+      --r-heading-color: #050c0f;
+      --border: #e0e0e0;
+      --muted: #666666;
+      --accent: #2f6feb;
+    }
+
+    .reveal {
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3 {
+      margin: 0;
+      color: var(--r-heading-color);
+      letter-spacing: -0.02em;
+    }
+
+    .reveal h1 {
+      font-size: 1.35em;
+      font-weight: 700;
+      margin-bottom: 0.2em;
+    }
+
+    .reveal h2 {
+      font-size: 0.95em;
+      font-weight: 700;
+      margin-bottom: 0.35em;
+    }
+
+    .reveal h3 {
+      font-size: 0.62em;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+      color: var(--muted);
+    }
+
+    .reveal p {
+      margin: 0.4em 0;
+      line-height: 1.45;
+    }
+
+    .reveal .subtitle {
+      color: var(--muted);
+      font-size: 0.62em;
+      margin-bottom: 0.9rem;
+    }
+
+    .reveal .slides section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+      padding: 0.5rem 1rem 0.2rem;
+      box-sizing: border-box;
+    }
+
+    .slide-frame {
+      width: min(100%, 1500px);
+    }
+
+    .transformation-grid {
+      display: grid;
+      gap: 0.8rem;
+      width: 100%;
+      align-items: start;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .transform-example {
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.65rem;
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .transform-example video {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #f8f8f8;
+      display: block;
+    }
+
+    .transform-example .small {
+      font-size: 0.55em;
+      color: var(--muted);
+      margin-top: 0.35rem;
+      min-height: 1.2em;
+    }
+
+    .title-slide {
+      text-align: center;
+    }
+
+    .title-pill {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: 0.55em;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.01em;
+    }
+
+    .slide-note {
+      color: var(--muted);
+      font-size: 0.52em;
+      margin-top: 0.75rem;
+    }
+
+    .weakness-slide .transformation-grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.45rem;
+    }
+
+    .weakness-slide .transform-example {
+      padding: 0.32rem;
+    }
+
+    .weakness-slide .transform-example video {
+      height: 78px;
+    }
+
+    .weakness-slide .transform-example .small {
+      font-size: 0.44em;
+      margin-top: 0.18rem;
+    }
+
+    .weakness-slide h2 {
+      font-size: 0.9em;
+    }
+
+    .weakness-slide .subtitle {
+      font-size: 0.56em;
+      margin-bottom: 0.5rem;
+    }
+
+    .weakness-slide .slide-note {
+      margin-top: 0.45rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class="title-slide">
+        <div class="slide-frame">
+          <div class="title-pill">CVPR report export deck</div>
+          <h1>Dataset Transformation Slides</h1>
+          <p class="subtitle">A separate deck for exporting the three transformation panels as PNGs.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="slide-frame">
+          <h2>Easy Transformations</h2>
+          <p class="subtitle">Original video plus the standard low-risk edits used for the easy set.</p>
+          <div class="transformation-grid grid-3">
+            <div class="transform-example">
+              <video autoplay loop muted playsinline preload="auto">
+                <source src="/videos/original.mp4" type="video/mp4">
+              </video>
+              <p class="small">Original</p>
+            </div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/brightness.mp4" type="video/mp4"></video><p class="small">Brightness</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/combination.mp4" type="video/mp4"></video><p class="small">Combination</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/crop_easy.mp4" type="video/mp4"></video><p class="small">Crop 10%</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/lowq.mp4" type="video/mp4"></video><p class="small">Low Quality</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/mirror.mp4" type="video/mp4"></video><p class="small">Mirror</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/speed.mp4" type="video/mp4"></video><p class="small">Speed</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/text_simple.mp4" type="video/mp4"></video><p class="small">Text Overlay</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/trim.mp4" type="video/mp4"></video><p class="small">Trim</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="slide-frame">
+          <h2>Hard Transformations</h2>
+          <p class="subtitle">More aggressive edits that still preserve the underlying banned content.</p>
+          <div class="transformation-grid grid-3">
+            <div class="transform-example">
+              <video autoplay loop muted playsinline preload="auto">
+                <source src="/videos/original.mp4" type="video/mp4">
+              </video>
+              <p class="small">Original</p>
+            </div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/combo_hard.mp4" type="video/mp4"></video><p class="small">Combo Hard</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/crop_heavy.mp4" type="video/mp4"></video><p class="small">Crop 30%</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/grayscale.mp4" type="video/mp4"></video><p class="small">Grayscale</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/reaction.mp4" type="video/mp4"></video><p class="small">Reaction</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/text_heavy.mp4" type="video/mp4"></video><p class="small">Heavy Text</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/vintage.mp4" type="video/mp4"></video><p class="small">Vintage</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="weakness-slide">
+        <div class="slide-frame">
+          <h2>Weakness Test Transformations</h2>
+          <p class="subtitle">Stress tests used to probe model failure modes and robustness gaps.</p>
+          <div class="transformation-grid grid-4">
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/aspect.mp4" type="video/mp4"></video><p class="small">Aspect</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/blur.mp4" type="video/mp4"></video><p class="small">Blur</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/color_invert.mp4" type="video/mp4"></video><p class="small">Invert</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/combo.mp4" type="video/mp4"></video><p class="small">Combo</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/combo_extreme.mp4" type="video/mp4"></video><p class="small">Extreme Combo</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/compression.mp4" type="video/mp4"></video><p class="small">Compression</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/fast.mp4" type="video/mp4"></video><p class="small">Fast</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/letterbox.mp4" type="video/mp4"></video><p class="small">Letterbox</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/overlay_10pct.mp4" type="video/mp4"></video><p class="small">Overlay 10%</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/overlay_25pct.mp4" type="video/mp4"></video><p class="small">Overlay 25%</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/overlay_50pct.mp4" type="video/mp4"></video><p class="small">Overlay 50%</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/overlay_75pct.mp4" type="video/mp4"></video><p class="small">Overlay 75%</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/pip.mp4" type="video/mp4"></video><p class="small">PiP</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/reverse.mp4" type="video/mp4"></video><p class="small">Reverse</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/saturation.mp4" type="video/mp4"></video><p class="small">Saturation</p></div>
+            <div class="transform-example"><video autoplay loop muted playsinline preload="auto"><source src="/videos/slow.mp4" type="video/mp4"></video><p class="small">Slow</p></div>
+          </div>
+          <p class="slide-note">Use this deck for slide screenshots or print-to-PNG exports in the final report.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      controls: true,
+      progress: true,
+      history: false,
+      transition: 'fade',
+      backgroundTransition: 'fade',
+      width: 1600,
+      height: 900,
+      margin: 0.04,
+      center: true
+    });
+  </script>
+</body>
+</html>
